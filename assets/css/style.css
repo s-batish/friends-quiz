@@ -45,7 +45,9 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-.quiz-container button {
+/* Buttons */
+
+.btn {
     font-family: 'Cherry Swash', sans-serif;
     font-size: 24px;
     width: 60vw;
@@ -53,4 +55,13 @@ h1 {
     margin: 15px;
     border-radius: 10px;
     background-color: #ffe599;
+    border: none;
+    color: #3a3a3a;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1.4rem 0 #eeba1d;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }
