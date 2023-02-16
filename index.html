@@ -18,8 +18,8 @@
             <button class="btn high-scores-btn">High Scores</button>
         </div>
     </section>
-    <!-- Start of rules section -->
-    <section class="rules-modal hidden">
+    <!-- Start of rules -->
+    <section class="rules-area hidden">
         <h2>How to play</h2>
         <p>Do you think you’re the Ultimate Friends Quiz Champion? Or will you struggle like Rachel making a trifle?</p>
         <p>Take the Ultimate Friends Quiz to find out!</p>
@@ -27,13 +27,25 @@
         <ul>
             <li>Once you have returned to the Home page, click Play</li>
             <li>You will be faced with a series of 10 questions and have 20 seconds to answer them</li>
-            <li>You will be awarded with 10 points for each correct question and any time remaining on your questions will 
-                be added to your score – so try and answer the questions as quickly as you can</li>
+            <li>You will be awarded 10 points for each correct question and any time remaining on your questions will 
+                be added to your score – so try to answer the questions as quickly as you can</li>
         </ul>
         <p><strong>Good luck and enjoy!</strong></p>
         <button class="btn home-btn">Home</button>
     </section>
+    <!-- Start of quiz -->
+    <section class="quiz-area hidden">
+        <div class="info-bar">
+            <div><i class="fa-solid fa-house home-icon"></i></div>
+            <div><i class="fa-solid fa-circle-question"></i> <span id="current-question">1</span>/10</div>
+            <div><i class="fa-solid fa-hourglass" id="timer"></i> 20</div>
+            <div><i class="fa-solid fa-trophy" id="current-score"></i> 0</div>
+        </div>
+
+    </section>
     <script src="assets/js/script.js"></script>
+    <!-- Font awesome script -->
+    <script src="https://kit.fontawesome.com/2ea159b595.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

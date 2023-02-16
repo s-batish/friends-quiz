@@ -1,19 +1,28 @@
-const rulesModal = document.querySelector(".rules-modal");
+const rulesArea = document.querySelector(".rules-area");
 const openRulesBtn = document.querySelector(".rules-btn");
 const returnHome = document.querySelector(".home-btn");
+const playQuizBtn = document.querySelector(".play-btn");
+const playQuiz = document.querySelector(".quiz-area");
+const homeIcon = document.querySelector(".home-icon");
 
-// Open rules modal
+// Event listeners
 
-const openRules = function() {
-    rulesModal.classList.remove("hidden");
-}
+// Open rules area
+openRulesBtn.addEventListener("click", function(){
+    rulesArea.classList.remove("hidden");
+})
 
-openRulesBtn.addEventListener("click", openRules);
+// Close rules area
+returnHome.addEventListener("click", function(){
+    rulesArea.classList.add("hidden");
+});
 
-// Close rules modal
+// Opens quiz area
+playQuizBtn.addEventListener("click", function(){
+    playQuiz.classList.remove("hidden");
+})
 
-const closeRules = function() {
-    rulesModal.classList.add("hidden");
-}
-
-returnHome.addEventListener("click", closeRules);
+// Return home
+homeIcon.addEventListener("click", function(){
+    playQuiz.classList.add("hidden");
+})

@@ -32,8 +32,8 @@ h2 {
     font-size: 24px;
 }
 
-/* Quiz container and rules modal*/
-.quiz-container, .rules-modal {
+/* Same styles for home page, rules, quiz area */
+.quiz-container, .rules-area, .quiz-area {
     background-color: #a0a9d9;
     border-radius: 10px;
     width: 80vw;
@@ -49,23 +49,23 @@ h2 {
     transform: translate(-50%, -50%);
 }
 
-.rules-modal {
+.rules-area {
     padding: 10px 10px 10px 25px;
 }
 
-.rules-modal ul {
+.rules-area ul {
     text-align: left;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-/* Hide rules modal */
+/* Hide rules area */
 
 .hidden {
     display: none;
 }
 
-.rules-modal .home-btn {
+.rules-area .home-btn {
     width: 40vw;
     padding: 5px;
 }
@@ -91,4 +91,17 @@ h2 {
     transition: transform 150ms;
 }
 
+/* Info bar */
 
+.info-bar {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+}
+
+.info-bar i {
+    font-size: 25px;
+}
