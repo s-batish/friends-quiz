@@ -25,11 +25,15 @@ h1 {
     line-height: 35px;
     font-size: 30px;
     padding-bottom: 10px;
-    
 }
 
-/* Quiz container */
-.quiz-container {
+h2 {
+    font-family: 'Cherry Swash', sans-serif;
+    font-size: 24px;
+}
+
+/* Quiz container and rules modal*/
+.quiz-container, .rules-modal {
     background-color: #a0a9d9;
     border-radius: 10px;
     width: 80vw;
@@ -43,6 +47,27 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.rules-modal {
+    padding: 10px 10px 10px 25px;
+}
+
+.rules-modal ul {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Hide rules modal */
+
+.hidden {
+    display: none;
+}
+
+.rules-modal .home-btn {
+    width: 40vw;
+    padding: 5px;
 }
 
 /* Buttons */
@@ -65,3 +90,5 @@ h1 {
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
+
+
