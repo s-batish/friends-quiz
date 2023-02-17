@@ -84,7 +84,7 @@ h2 {
     color: #3a3a3a;
 }
 
-.btn:hover {
+.hover:hover {
     cursor: pointer;
     box-shadow: 0 0.5rem 1.4rem 0 #eeba1d;
     transform: translateY(-0.1rem);
@@ -104,4 +104,8 @@ h2 {
 
 .info-bar i {
     font-size: 25px;
+}
+
+.home-icon:hover {
+    box-shadow: none;
 }
