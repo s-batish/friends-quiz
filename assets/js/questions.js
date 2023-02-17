@@ -1,6 +1,6 @@
 // All quiz questions
 
-let questions = [
+const questions = [
     {
         question: "How many seasons of 'Friends' were there?",
         a: "5",
