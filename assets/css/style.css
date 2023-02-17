@@ -53,21 +53,25 @@ h2 {
     padding: 10px 10px 10px 25px;
 }
 
+.rules-area h2 {
+    padding-bottom: 10px;
+}
+
 .rules-area ul {
     text-align: left;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+.rules-area .home-btn {
+    width: 40vw;
+    padding: 5px;
+}
+
 /* Hide rules area */
 
 .hidden {
     display: none;
-}
-
-.rules-area .home-btn {
-    width: 40vw;
-    padding: 5px;
 }
 
 /* Buttons */
@@ -91,6 +95,8 @@ h2 {
     transition: transform 150ms;
 }
 
+/* Quiz area */
+
 /* Info bar */
 
 .info-bar {
@@ -108,4 +114,30 @@ h2 {
 
 .home-icon:hover {
     box-shadow: none;
+}
+
+/* Question area */
+
+.question-area {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.answer-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.next-btn {
+    font-size: 16px;
+    width: 20vw;
+    padding: 5px;
 }
