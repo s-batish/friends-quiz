@@ -8,21 +8,42 @@ const homeIcon = document.querySelector(".home-icon");
 // Event listeners
 
 // Open rules area
-openRulesBtn.addEventListener("click", function(){
+openRulesBtn.addEventListener("click", () => {
     rulesArea.classList.remove("hidden");
 })
 
 // Close rules area
-returnHome.addEventListener("click", function(){
+returnHome.addEventListener("click", () => {
     rulesArea.classList.add("hidden");
 });
 
 // Opens quiz area
-playQuizBtn.addEventListener("click", function(){
+playQuizBtn.addEventListener("click", () => {
     playQuiz.classList.remove("hidden");
+    playQuiz();
 })
 
 // Return home
-homeIcon.addEventListener("click", function(){
+homeIcon.addEventListener("click", () => {
     playQuiz.classList.add("hidden");
 })
+
+function playQuiz() {
+
+}
+
+function showQuestion() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function incrementScore() {
+
+}
+
+function nextQuestion() {
+    
+}
