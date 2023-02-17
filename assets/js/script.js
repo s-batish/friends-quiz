@@ -45,5 +45,9 @@ function incrementScore() {
 }
 
 function nextQuestion() {
+
+}
+
+function restartQuiz() {
     
 }
