@@ -4,6 +4,16 @@ const returnHome = document.querySelector(".home-btn");
 const playQuizBtn = document.querySelector(".play-btn");
 const playQuiz = document.querySelector(".quiz-area");
 const homeIcon = document.querySelector(".home-icon");
+const question = document.getElementById("question");
+
+let currentQuestion = {};
+let score = 0;
+let questionNumber = 0; // Displays the question the user is on
+let availableQuestions = []; // Questions removed once they are used so they are not repeated
+
+// Constants
+const correctPoints = 10;
+const maxQuestions = 10;
 
 // Event listeners
 
@@ -20,7 +30,6 @@ returnHome.addEventListener("click", () => {
 // Opens quiz area
 playQuizBtn.addEventListener("click", () => {
     playQuiz.classList.remove("hidden");
-    playQuiz();
 })
 
 // Return home
@@ -28,26 +37,27 @@ homeIcon.addEventListener("click", () => {
     playQuiz.classList.add("hidden");
 })
 
-function playQuiz() {
 
-}
+// function playQuiz() {
 
-function showQuestion() {
+// }
 
-}
+// function showQuestion() {
 
-function checkAnswer() {
+// }
 
-}
+// function checkAnswer() {
 
-function incrementScore() {
+// }
 
-}
+// function incrementScore() {
 
-function nextQuestion() {
+// }
 
-}
+// function nextQuestion() {
 
-function restartQuiz() {
+// }
+
+// function restartQuiz() {
     
-}
+// }
