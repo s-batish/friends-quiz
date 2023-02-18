@@ -1,10 +1,10 @@
-const rulesArea = document.querySelector(".rules-area");
-const openRulesBtn = document.querySelector(".rules-btn");
-const returnHome = document.querySelector(".home-btn");
-const playQuizBtn = document.querySelector(".play-btn");
-const playQuiz = document.querySelector(".quiz-area");
-const homeIcon = document.querySelector(".home-icon");
-const question = document.getElementById("#question");
+const rulesArea = document.getElementById("rules-area");
+const openRulesBtn = document.getElementById("rules-btn");
+const returnHome = document.getElementById("home-btn");
+const playQuizBtn = document.getElementById("play-btn");
+const playQuiz = document.getElementById("quiz-area");
+const homeIcon = document.getElementById("home-icon");
+const question = document.getElementById("question");
 
 let currentQuestion = {};
 let score = 0;
@@ -39,14 +39,7 @@ homeIcon.addEventListener("click", () => {
     playQuiz.classList.add("hidden");
 })
 
-function startQuiz() {
-    questionNumber = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    console.log(availableQuestions);
-}
 
-startQuiz();
 
 // function runQuiz() {
 

@@ -15,13 +15,13 @@
     <section class="quiz-container">
             <h1>The One with the Ultimate Friends Quiz</h1>
         <div>
-            <button class="btn play-btn hover">Play</button>
-            <button class="btn rules-btn hover">How to play</button>
+            <button class="btn hover" id="play-btn">Play</button>
+            <button class="btn hover" id="rules-btn">How to play</button>
             <button class="btn high-scores-btn hover">High Scores</button>
         </div>
     </section>
     <!-- Start of rules -->
-    <section class="rules-area hidden">
+    <section class="rules-area hidden" id="rules-area">
         <h2>How to play</h2>
         <p>Do you think you’re the Ultimate Friends Quiz Champion? Or will you struggle like Rachel making a trifle?</p>
         <p>Take the Ultimate Friends Quiz to find out!</p>
@@ -33,12 +33,12 @@
                 be added to your score – so try to answer the questions as quickly as you can</li>
         </ul>
         <p><strong>Good luck and enjoy!</strong></p>
-        <button class="btn home-btn hover">Home</button>
+        <button class="btn hover" id="home-btn">Home</button>
     </section>
     <!-- Start of quiz -->
-    <section class="quiz-area hidden">
+    <section class="quiz-area hidden" id="quiz-area">
         <div class="info-bar">
-            <div><i class="fa-solid fa-house home-icon hover"></i></div>
+            <div><i class="fa-solid fa-house hover" id="home-icon"></i></div>
             <div><i class="fa-solid fa-circle-question"></i> <span id="current-question">1</span>/10</div>
             <div><i class="fa-solid fa-hourglass" id="timer"></i> 20</div>
             <div><i class="fa-solid fa-trophy" id="current-score"></i> 0</div>
