@@ -1,6 +1,6 @@
 // All quiz questions
 
-const questions = [
+const quizQuestions = [
     {
         question: "How many seasons of 'Friends' were there?",
         a: "5",
