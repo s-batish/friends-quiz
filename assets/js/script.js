@@ -63,29 +63,25 @@ function getNewQuestion() {
     answerButton2.innerText = currentQuestion.b;
     answerButton3.innerText = currentQuestion.c;
     answerButton4.innerText = currentQuestion.d;
+    answerButton1.onclick = checkAnswer();
+    answerButton2.onclick = checkAnswer();
+    answerButton3.onclick = checkAnswer();
+    answerButton4.onclick = checkAnswer();
 
 // Removes question that has just been used from availableQuestions array
-    availableQuestions.splice(questionIndex, 1); // Code taken from https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
+    availableQuestions.splice(questionIndex, 1); // Code from https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
 }
 
-// function runQuiz() {
-//     console.log("started");
-//     homeArea.classList.add("hidden");
-//     shuffledQuestions = quizQuestions.sort(() => Math.random() - .5); // Code to shuffle questions from https://www.youtube.com/watch?v=riDzcEQbX6k&t=1419s
-//     currentQuestionIndex = 0;
-//     playQuiz.classList.remove("hidden");
-//     setNextQuestion();
-// }
-
-// function setNextQuestion() {
-//     showQuestion(shuffledQuestions[currentQuestionIndex]);
-// }
-
-// function showQuestion(question) {
-//     questionElement.innerText = question.question;
-//     question.answers
-// }
-
+function checkAnswer() {
+    let userAnswer = this.innerText;
+    let correctAnswer = currentQuestion.answer;
+    if (userAnswer === correctAnswer) {
+        this.style.backgroundColor = "green";
+        incrementScore();
+    } else {
+        this.style.backgroundColor = "red";
+    }
+}
 
 
 // function checkAnswer() {
