@@ -12,13 +12,12 @@ const answerButton3 = document.getElementById("answer-btn-3");
 const answerButton4 = document.getElementById("answer-btn-4");
 const nextButton = document.getElementById("next-btn");
 const answerButtons = document.getElementsByClassName("answer-btn");
+const restartButton = document.getElementById("restart-btn");
 
 let currentQuestion = {};
 let score = 0;
 let questionNumber = 0; // Displays the question the user is on
 let availableQuestions = []; // Questions removed once they are used so they are not repeated
-let userChoice;
-let questionIndex = 0;
 
 // Constants
 const correctPoints = 10;
@@ -56,6 +55,9 @@ answerButton4.addEventListener("click", checkAnswer);
 // Next question
 nextButton.addEventListener("click", nextQuestion);
 
+// Restart quiz
+restartButton.addEventListener("click", runQuiz);
+
 function runQuiz() {
     homeArea.classList.add("hidden");
     playQuiz.classList.remove("hidden");
@@ -74,13 +76,13 @@ function getNewQuestion() {
     answerButton2.innerText = currentQuestion.b;
     answerButton3.innerText = currentQuestion.c;
     answerButton4.innerText = currentQuestion.d;
-    // answerButton1.onclick = checkAnswer();
-    // answerButton2.onclick = checkAnswer();
-    // answerButton3.onclick = checkAnswer();
-    // answerButton4.onclick = checkAnswer();
     
 // Removes question that has just been used from availableQuestions array
     availableQuestions.splice(questionIndex, 1); // Code from https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
+
+    // Ensures that users have to select an answer before continuing
+    nextButton.setAttribute("disabled", "disabled");
+    nextButton.classList.remove("hover");
 }
 
 function checkAnswer() {
@@ -95,6 +97,10 @@ function checkAnswer() {
     answerButton2.setAttribute("disabled", "disabled");
     answerButton3.setAttribute("disabled", "disabled");
     answerButton4.setAttribute("disabled", "disabled");
+
+    // Allows users to click Next once they have answered
+    nextButton.removeAttribute("disabled", "disabled");
+    nextButton.classList.add("hover");
 
     let userAnswer = this.innerText;
     let correctAnswer = currentQuestion.answer;

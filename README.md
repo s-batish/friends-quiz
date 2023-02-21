@@ -12,7 +12,10 @@
 ## Design
 ### Wireframes
 ### Colour Scheme
+The purple and yellow colours have been used because of their connotations with the TV show 'Friends' and so have been chosen to tie into the theme of the quiz and also because they would be instantly recognisable colours to a fan of the programme.
 ### Typography
+- The font 'Gloria Hallelujah' has been used for the title of the quiz because of its similarity to the 'Friends' logo.
+- 'Cherry Swash' has been used for the headings, buttons and questions, and 'Montserrat' has been used for the answers and paragraph elements because they complement each other quite well and create an easy to read, but visually appealing quiz.
 ## Features
 ## Technologies
 ## Testing
