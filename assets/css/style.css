@@ -147,3 +147,14 @@ hr {
     width: 20vw;
     padding: 5px;
 }
+
+/* Answers */
+.correct {
+    background-color: rgb(105, 190, 65);
+    font-weight: bold;
+}
+
+.incorrect {
+    background-color: rgb(243, 88, 88);
+    font-weight: bold;
+}

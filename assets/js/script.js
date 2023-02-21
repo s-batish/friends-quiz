@@ -15,7 +15,8 @@ let currentQuestion = {};
 let score = 0;
 let questionNumber = 0; // Displays the question the user is on
 let availableQuestions = []; // Questions removed once they are used so they are not repeated
-let shuffledQuestions, currentQuestionIndex;
+let userChoice;
+let questionIndex = 0;
 
 // Constants
 const correctPoints = 10;
@@ -44,13 +45,18 @@ homeIcon.addEventListener("click", () => {
     playQuiz.classList.add("hidden");
 })
 
+// Checks answers
+answerButton1.addEventListener("click", checkAnswer);
+answerButton2.addEventListener("click", checkAnswer);
+answerButton3.addEventListener("click", checkAnswer);
+answerButton4.addEventListener("click", checkAnswer);
+
 function runQuiz() {
     homeArea.classList.add("hidden");
     playQuiz.classList.remove("hidden");
     questionNumber = 0;
     score = 0;
     availableQuestions = [...quizQuestions]; // Full copy of questions
-    console.log(availableQuestions);
     getNewQuestion();
 }
 
@@ -63,11 +69,11 @@ function getNewQuestion() {
     answerButton2.innerText = currentQuestion.b;
     answerButton3.innerText = currentQuestion.c;
     answerButton4.innerText = currentQuestion.d;
-    answerButton1.onclick = checkAnswer();
-    answerButton2.onclick = checkAnswer();
-    answerButton3.onclick = checkAnswer();
-    answerButton4.onclick = checkAnswer();
-
+    // answerButton1.onclick = checkAnswer();
+    // answerButton2.onclick = checkAnswer();
+    // answerButton3.onclick = checkAnswer();
+    // answerButton4.onclick = checkAnswer();
+    
 // Removes question that has just been used from availableQuestions array
     availableQuestions.splice(questionIndex, 1); // Code from https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
 }
@@ -76,17 +82,12 @@ function checkAnswer() {
     let userAnswer = this.innerText;
     let correctAnswer = currentQuestion.answer;
     if (userAnswer === correctAnswer) {
-        this.style.backgroundColor = "green";
-        incrementScore();
+        this.classList.add ("correct");
     } else {
-        this.style.backgroundColor = "red";
+        this.classList.add ("incorrect");
     }
 }
 
-
-// function checkAnswer() {
-
-// }
 
 // function incrementScore() {
 

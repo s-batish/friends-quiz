@@ -7,7 +7,7 @@ const quizQuestions = [
         b: "10",
         c: "15",
         d: "20",
-        answer: "b",
+        answer: "10",
     },
     {
         question: "What name does Ross mistakenly say at the altar when he's about to marry Emily?",
@@ -15,7 +15,7 @@ const quizQuestions = [
         b: "Emma",
         c: "Rachel",
         d: "Monica",
-        answer: "c",
+        answer: "Rachel",
     },
     {
         question: "Which character had a spin off series set in LA?",
@@ -23,7 +23,7 @@ const quizQuestions = [
         b: "Chandler",
         c: "Monica",
         d: "Rachel",
-        answer: "a",
+        answer: "Joey",
     },
     {
         question: "What is the name of the blond haired barista at Central Perk?",
@@ -31,7 +31,7 @@ const quizQuestions = [
         b: "Phoebe",
         c: "Gunther",
         d: "Janice",
-        answer: "c",
+        answer: "Gunther",
     },
     {
         question: "What animal does Rachel run into when she attempts to jog like Phoebe?",
@@ -39,7 +39,7 @@ const quizQuestions = [
         b: "dog",
         c: "cow",
         d: "horse",
-        answer: "d",
+        answer: "horse",
     },
     {
         question: "Which actor stars opposite Joey in a WW1 movie?",
@@ -47,7 +47,7 @@ const quizQuestions = [
         b: "Jeff Goldblum",
         c: "Hugh Laurie",
         d: "Bruce Willis",
-        answer: "a",
+        answer: "Gary Oldman",
     },
     {
         question: "How many sisters does Joey have?",
@@ -55,7 +55,7 @@ const quizQuestions = [
         b: "5",
         c: "7",
         d: "9",
-        answer: "c",
+        answer: "7",
     },
     {
         question: "What colour is the main sofa in Central Perk?",
@@ -63,7 +63,7 @@ const quizQuestions = [
         b: "purple",
         c: "red",
         d: "orange",
-        answer: "d",
+        answer: "orange",
     },
     {
         question: "Which actress plays Phoebe?",
@@ -71,7 +71,7 @@ const quizQuestions = [
         b: "Lisa Kudrow",
         c: "Ellen DeGeneres",
         d: "Courteney Cox",
-        answer: "b",
+        answer: "Lisa Kudrow",
     },
     {
         question: "What was the name of Ross' first wife?",
@@ -79,7 +79,7 @@ const quizQuestions = [
         b: "Susan",
         c: "Rachel",
         d: "Carol",
-        answer: "d",
+        answer: "Carol",
     },
     {
         question: "How many pages were in the letter that Rachel wrote to Ross?",
@@ -87,7 +87,7 @@ const quizQuestions = [
         b: "12",
         c: "18",
         d: "24",
-        answer: "c",
+        answer: "18",
     },
     {
         question: "Which Caribbean island do the group travel to for Ross' convention in Season 9?",
@@ -95,7 +95,7 @@ const quizQuestions = [
         b: "Jamaica",
         c: "Cuba",
         d: "The Bahamas",
-        answer: "a",
+        answer: "Barbados",
     },
     {
         question: "What is the name of Ross' monkey?",
@@ -103,7 +103,7 @@ const quizQuestions = [
         b: "Mandy",
         c: "Maurice",
         d: "Marcel",
-        answer: "d",
+        answer: "Marcel",
     },
     {
         question: "What instrument does Phoebe play?",
@@ -111,7 +111,7 @@ const quizQuestions = [
         b: "Piano",
         c: "Flute",
         d: "Keyboard",
-        answer: "a",
+        answer: "Guitar",
     },
     {
         question: "What caused the fire in Phoebe and Rachel's apartment?",
@@ -119,6 +119,6 @@ const quizQuestions = [
         b: "Hair straightener",
         c: "Electrical fault",
         d: "Hair curler",
-        answer: "b",
+        answer: "Hair straightener",
     },
 ]
