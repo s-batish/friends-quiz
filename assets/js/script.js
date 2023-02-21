@@ -10,6 +10,8 @@ const answerButton1 = document.getElementById("answer-btn-1");
 const answerButton2 = document.getElementById("answer-btn-2");
 const answerButton3 = document.getElementById("answer-btn-3");
 const answerButton4 = document.getElementById("answer-btn-4");
+const nextButton = document.getElementById("next-btn");
+const answerButtons = document.getElementsByClassName("answer-btn");
 
 let currentQuestion = {};
 let score = 0;
@@ -50,6 +52,9 @@ answerButton1.addEventListener("click", checkAnswer);
 answerButton2.addEventListener("click", checkAnswer);
 answerButton3.addEventListener("click", checkAnswer);
 answerButton4.addEventListener("click", checkAnswer);
+
+// Next question
+nextButton.addEventListener("click", nextQuestion);
 
 function runQuiz() {
     homeArea.classList.add("hidden");
@@ -100,12 +105,23 @@ function checkAnswer() {
     }
 }
 
+function nextQuestion() {
+    getNewQuestion()
+    answerButton1.classList.add("hover");
+    answerButton2.classList.add("hover");
+    answerButton3.classList.add("hover");
+    answerButton4.classList.add("hover");
+    answerButton1.removeAttribute("disabled", "disabled");
+    answerButton2.removeAttribute("disabled", "disabled");
+    answerButton3.removeAttribute("disabled", "disabled");
+    answerButton4.removeAttribute("disabled", "disabled");
+    for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].classList.remove("correct");
+    answerButtons[i].classList.remove("incorrect");
+    }
+}
 
 // function incrementScore() {
-
-// }
-
-// function nextQuestion() {
 
 // }
 
