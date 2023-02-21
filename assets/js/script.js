@@ -79,6 +79,18 @@ function getNewQuestion() {
 }
 
 function checkAnswer() {
+    // Removes hover when an answer has been clicked
+    answerButton1.classList.remove("hover");
+    answerButton2.classList.remove("hover");
+    answerButton3.classList.remove("hover");
+    answerButton4.classList.remove("hover");
+
+    // Prevents user clicking any other answers once one has been clicked
+    answerButton1.setAttribute("disabled", "disabled");
+    answerButton2.setAttribute("disabled", "disabled");
+    answerButton3.setAttribute("disabled", "disabled");
+    answerButton4.setAttribute("disabled", "disabled");
+
     let userAnswer = this.innerText;
     let correctAnswer = currentQuestion.answer;
     if (userAnswer === correctAnswer) {
