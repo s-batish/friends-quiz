@@ -70,9 +70,11 @@ function runQuiz() {
 }
 
 function getNewQuestion() {
+    // Increments the question counter
     questionCounter++;
     questionCounterText.innerText = `${questionCounter}/${maxQuestions}`;
 
+    // Randomises the order of the questions
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     questionElement.innerText = currentQuestion.question;
@@ -106,6 +108,7 @@ function checkAnswer() {
     nextButton.removeAttribute("disabled", "disabled");
     nextButton.classList.add("hover");
 
+    // Checks whether the user answer is correct or not and changes the colour of the answer button accordingly
     let userAnswer = this.innerText;
     let correctAnswer = currentQuestion.answer;
     if (userAnswer === correctAnswer) {
@@ -116,6 +119,7 @@ function checkAnswer() {
     }
 }
 
+// Generates the next question and reimplements the mouse hover and the ability to click the answer buttons
 function nextQuestion() {
     getNewQuestion()
     answerButton1.classList.add("hover");
@@ -126,12 +130,16 @@ function nextQuestion() {
     answerButton2.removeAttribute("disabled", "disabled");
     answerButton3.removeAttribute("disabled", "disabled");
     answerButton4.removeAttribute("disabled", "disabled");
+
+    // Removes the colour of the answer buttons from the previous question
     for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].classList.remove("correct");
     answerButtons[i].classList.remove("incorrect");
     }
 }
 
+// Increments user score by 10 points for each correct question
+// Code from https://www.youtube.com/watch?v=BOQLbu_Crc0&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=6
 function incrementScore(num) {
     score +=num;
     scoreText.innerText = score;
