@@ -56,7 +56,7 @@ answerButton4.addEventListener("click", checkAnswer);
 nextButton.addEventListener("click", nextQuestion);
 
 // Restart quiz
-restartButton.addEventListener("click", runQuiz);
+restartButton.addEventListener("click", nextQuestion);
 
 function runQuiz() {
     homeArea.classList.add("hidden");
