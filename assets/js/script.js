@@ -13,10 +13,12 @@ const answerButton4 = document.getElementById("answer-btn-4");
 const nextButton = document.getElementById("next-btn");
 const answerButtons = document.getElementsByClassName("answer-btn");
 const restartButton = document.getElementById("restart-btn");
+const questionCounterText = document.getElementById("current-question");
+const scoreText = document.getElementById("current-score");
 
 let currentQuestion = {};
 let score = 0;
-let questionNumber = 0; // Displays the question the user is on
+let questionCounter = 0; // Displays the question the user is on
 let availableQuestions = []; // Questions removed once they are used so they are not repeated
 
 // Constants
@@ -61,14 +63,16 @@ restartButton.addEventListener("click", nextQuestion);
 function runQuiz() {
     homeArea.classList.add("hidden");
     playQuiz.classList.remove("hidden");
-    questionNumber = 0;
+    questionCounter = 0;
     score = 0;
     availableQuestions = [...quizQuestions]; // Full copy of questions
     getNewQuestion();
 }
 
 function getNewQuestion() {
-    questionNumber++;
+    questionCounter++;
+    questionCounterText.innerText = `${questionCounter}/${maxQuestions}`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     questionElement.innerText = currentQuestion.question;
@@ -106,6 +110,7 @@ function checkAnswer() {
     let correctAnswer = currentQuestion.answer;
     if (userAnswer === correctAnswer) {
         this.classList.add ("correct");
+        incrementScore(correctPoints);
     } else {
         this.classList.add ("incorrect");
     }
@@ -127,9 +132,10 @@ function nextQuestion() {
     }
 }
 
-// function incrementScore() {
-
-// }
+function incrementScore(num) {
+    score +=num;
+    scoreText.innerText = score;
+}
 
 // function restartQuiz() {
     
