@@ -16,11 +16,14 @@ const restartButton = document.getElementById("restart-btn");
 const questionCounterText = document.getElementById("current-question");
 const scoreText = document.getElementById("current-score");
 const endPage = document.getElementById("end-page");
+const userCorrectQuestions = document.getElementById("user-correct-questions");
+const userFinalScore = document.getElementById("user-score");
 
 let currentQuestion = {};
 let score = 0;
 let questionCounter = 0; // Displays the question the user is on
 let availableQuestions = []; // Questions removed once they are used so they are not repeated
+let correctQuestions = 0; // Increases with the increment score function
 
 // Constants
 const correctPoints = 10;
@@ -75,10 +78,12 @@ function runQuiz() {
 }
 
 function getNewQuestion() {
+    // Takes user to end page once max number of questions have been reached
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         console.log("the end");
         playQuiz.classList.add("hidden");
         endPage.classList.remove("hidden");
+        userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
     }
 
     // Increments the question counter
@@ -154,6 +159,7 @@ function nextQuestion() {
 function incrementScore(num) {
     score +=num;
     scoreText.innerText = score;
+    correctQuestions++;
 }
 
 // function restartQuiz() {
