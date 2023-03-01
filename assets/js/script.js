@@ -25,8 +25,10 @@ let score = 0;
 let questionCounter = 0; // Displays the question the user is on
 let availableQuestions = []; // Questions removed once they are used so they are not repeated
 let correctQuestions = 0; // Increases with the increment score function
-let timer = setInterval(startTimer, 1000);
-let timeLeft = 20;
+// let timer = setInterval(startTimer, 1000);
+// let timeLeft = 20;
+let timeLeft;
+let timer;
 
 // Constants
 const correctPoints = 10;
@@ -81,9 +83,12 @@ function runQuiz() {
     correctQuestions = 0;
     availableQuestions = [...quizQuestions]; // Full copy of questions
     getNewQuestion();
+    // timeLeft = 20;
+    startTimer()
 }
 
 function getNewQuestion() {
+    
     // Takes user to end page once max number of questions have been reached
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         playQuiz.classList.add("hidden");
@@ -104,13 +109,14 @@ function getNewQuestion() {
     answerButton2.innerText = currentQuestion.b;
     answerButton3.innerText = currentQuestion.c;
     answerButton4.innerText = currentQuestion.d;
-    
-// Removes question that has just been used from availableQuestions array
+
+    // Removes question that has just been used from availableQuestions array
     availableQuestions.splice(questionIndex, 1); // Code from https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
 
     // Ensures that users have to select an answer before continuing
     nextButton.setAttribute("disabled", "disabled");
     nextButton.classList.remove("hover");
+    nextButton.classList.remove("bold");
 }
 
 function checkAnswer() {
@@ -134,18 +140,22 @@ function checkAnswer() {
     let userAnswer = this.innerText;
     let correctAnswer = currentQuestion.answer;
     if (userAnswer === correctAnswer) {
-        this.classList.add ("correct");
+        this.classList.add("correct");
         incrementScore(correctPoints);
-        clearInterval(timer);
+        // clearInterval(timer);
+        stopTimer();
     } else {
-        this.classList.add ("incorrect");
-        clearInterval(timer);
+        this.classList.add("incorrect");
+        // clearInterval(timer);
+        stopTimer();
     }
 }
 
 // Generates the next question and reimplements the mouse hover and the ability to click the answer buttons
 function nextQuestion() {
-    startTimer();
+    timerElement.innerText = 20;
+    startTimer()
+    // timeLeft = 20;
     getNewQuestion();
     answerButton1.classList.add("hover");
     answerButton2.classList.add("hover");
@@ -158,29 +168,90 @@ function nextQuestion() {
 
     // Removes the colour of the answer buttons from the previous question
     for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].classList.remove("correct");
-    answerButtons[i].classList.remove("incorrect");
+        answerButtons[i].classList.remove("correct");
+        answerButtons[i].classList.remove("incorrect");
     }
 }
 
 // Increments user score by 10 points for each correct question
 // Code from https://www.youtube.com/watch?v=BOQLbu_Crc0&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=6
 function incrementScore(num) {
-    score +=num;
+    score += num;
     scoreText.innerText = score += timeLeft;
     correctQuestions++;
 }
 
 // function restartQuiz() {
-    
+
+// }
+
+// function startTimer() {
+//     timeLeft = 20;
+//     timer = setInterval(function () {
+//         timerElement.innerHTML = timeLeft;
+//         timeLeft -= 1;
+//     }, 1000);
+// }
+
+// function startTimer() {
+//     timeLeft = 20;
+//     timer = setInterval(function () {
+        
+//         if (timeLeft >= 0) {
+//             timeLeft--;
+//             timerElement.innerText = timeLeft;
+//         } else {
+//             clearInterval(timer);
+//         }
+//     })
 // }
 
 // Starts timer once quiz begins
 // Code from https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
+// function startTimer() {
+//     timerElement.innerText = timeLeft;
+//     timeLeft--;
+//     if (timeLeft === -1) {
+//         clearInterval(timer);
+//     }
+// }
+
+// = setInterval(startTimer, 1000)
+
+// Sets timer to 20 seconds and decreases it every second
 function startTimer() {
-    timerElement.innerText = timeLeft;
-    timeLeft--;
-    if (timeLeft === -1) {
-        clearInterval(timer);
-    }
+    timeLeft = 20;
+    timer = setInterval(function () {
+        countdown();
+        timerElement.innerText = timeLeft;
+    }, 1000);
 }
+
+// Counts down from 20 seconds on each question
+// Prevetns user from clicking answer buttons once timer reaches 0, and boldens nextButton
+function countdown() {
+    let correctAnswer = currentQuestion.answer;
+    let answerButtons = document.getElementsByClassName("answer-btn");
+  
+    if (timeLeft === 0) {
+      stopTimer();
+      nextButton.removeAttribute("disabled", "disabled");
+      nextButton.classList.add("hover");
+      nextButton.classList.add("bold");
+      answerButton1.setAttribute("disabled", "disabled");
+      answerButton2.setAttribute("disabled", "disabled");
+      answerButton3.setAttribute("disabled", "disabled");
+      answerButton4.setAttribute("disabled", "disabled");
+      answerButton1.classList.remove("hover");
+      answerButton2.classList.remove("hover");
+      answerButton3.classList.remove("hover");
+      answerButton4.classList.remove("hover");
+    } else {
+      timeLeft--;
+    }
+  }
+  
+//  Stops timer
+  function stopTimer() {
+    clearInterval(timer);
+  }
