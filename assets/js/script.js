@@ -27,7 +27,7 @@ let correctQuestions = 0; // Increases with the increment score function
 
 // Constants
 const correctPoints = 10;
-const maxQuestions = 10;
+const maxQuestions = 3;
 
 // Event listeners
 
@@ -53,6 +53,8 @@ for (let i = 0; i < homeIcon.length; i++) {
         homeArea.classList.remove("hidden");
         playQuiz.classList.add("hidden");
         endPage.classList.add("hidden");
+        score = 0;
+        scoreText.innerText = 0;
     })
 }
 
@@ -73,6 +75,7 @@ function runQuiz() {
     playQuiz.classList.remove("hidden");
     questionCounter = 0;
     score = 0;
+    correctQuestions = 0;
     availableQuestions = [...quizQuestions]; // Full copy of questions
     getNewQuestion();
 }
@@ -80,10 +83,10 @@ function runQuiz() {
 function getNewQuestion() {
     // Takes user to end page once max number of questions have been reached
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-        console.log("the end");
         playQuiz.classList.add("hidden");
         endPage.classList.remove("hidden");
         userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
+        userFinalScore.innerText = score;
     }
 
     // Increments the question counter
