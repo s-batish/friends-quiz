@@ -4,7 +4,7 @@ const openRulesBtn = document.getElementById("rules-btn");
 const returnHome = document.getElementById("home-btn");
 const playQuizBtn = document.getElementById("play-btn");
 const playQuiz = document.getElementById("quiz-area");
-const homeIcon = document.getElementById("home-icon");
+const homeIcon = document.getElementsByClassName("home-icon");
 const questionElement = document.getElementById("question");
 const answerButton1 = document.getElementById("answer-btn-1");
 const answerButton2 = document.getElementById("answer-btn-2");
@@ -15,6 +15,7 @@ const answerButtons = document.getElementsByClassName("answer-btn");
 const restartButton = document.getElementById("restart-btn");
 const questionCounterText = document.getElementById("current-question");
 const scoreText = document.getElementById("current-score");
+const endPage = document.getElementById("end-page");
 
 let currentQuestion = {};
 let score = 0;
@@ -43,10 +44,14 @@ returnHome.addEventListener("click", () => {
 playQuizBtn.addEventListener("click", runQuiz);
 
 // Return home
-homeIcon.addEventListener("click", () => {
-    homeArea.classList.remove("hidden");
-    playQuiz.classList.add("hidden");
-})
+// Event listener loops through all of the home icons
+for (let i = 0; i < homeIcon.length; i++) {
+    homeIcon[i].addEventListener("click", () => {
+        homeArea.classList.remove("hidden");
+        playQuiz.classList.add("hidden");
+        endPage.classList.add("hidden");
+    })
+}
 
 // Checks answers
 answerButton1.addEventListener("click", checkAnswer);
@@ -70,6 +75,12 @@ function runQuiz() {
 }
 
 function getNewQuestion() {
+    if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+        console.log("the end");
+        playQuiz.classList.add("hidden");
+        endPage.classList.remove("hidden");
+    }
+
     // Increments the question counter
     questionCounter++;
     questionCounterText.innerText = `${questionCounter}/${maxQuestions}`;
