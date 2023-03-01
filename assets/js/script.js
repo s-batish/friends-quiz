@@ -18,12 +18,15 @@ const scoreText = document.getElementById("current-score");
 const endPage = document.getElementById("end-page");
 const userCorrectQuestions = document.getElementById("user-correct-questions");
 const userFinalScore = document.getElementById("user-score");
+const timerElement = document.getElementById("timer");
 
 let currentQuestion = {};
 let score = 0;
 let questionCounter = 0; // Displays the question the user is on
 let availableQuestions = []; // Questions removed once they are used so they are not repeated
 let correctQuestions = 0; // Increases with the increment score function
+let timer = setInterval(startTimer, 1000);
+let timeLeft = 20;
 
 // Constants
 const correctPoints = 10;
@@ -133,14 +136,17 @@ function checkAnswer() {
     if (userAnswer === correctAnswer) {
         this.classList.add ("correct");
         incrementScore(correctPoints);
+        clearInterval(timer);
     } else {
         this.classList.add ("incorrect");
+        clearInterval(timer);
     }
 }
 
 // Generates the next question and reimplements the mouse hover and the ability to click the answer buttons
 function nextQuestion() {
-    getNewQuestion()
+    startTimer();
+    getNewQuestion();
     answerButton1.classList.add("hover");
     answerButton2.classList.add("hover");
     answerButton3.classList.add("hover");
@@ -161,10 +167,20 @@ function nextQuestion() {
 // Code from https://www.youtube.com/watch?v=BOQLbu_Crc0&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=6
 function incrementScore(num) {
     score +=num;
-    scoreText.innerText = score;
+    scoreText.innerText = score += timeLeft;
     correctQuestions++;
 }
 
 // function restartQuiz() {
     
 // }
+
+// Starts timer once quiz begins
+// Code from https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
+function startTimer() {
+    timerElement.innerText = timeLeft;
+    timeLeft--;
+    if (timeLeft === -1) {
+        clearInterval(timer);
+    }
+}
