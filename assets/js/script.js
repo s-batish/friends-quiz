@@ -83,7 +83,7 @@ function runQuiz() {
     correctQuestions = 0;
     availableQuestions = [...quizQuestions]; // Full copy of questions
     getNewQuestion();
-    timeLeft = 20;
+    timerElement.innerText = 20;
     startTimer();
 }
 
@@ -192,7 +192,7 @@ function startTimer() {
 // Prevents user from clicking answer buttons once timer reaches 0, and boldens nextButton
 function countdown() {
     
-  
+
     if (timeLeft === 0) {
       stopTimer();
       nextButton.removeAttribute("disabled", "disabled");
