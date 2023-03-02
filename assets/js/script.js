@@ -12,7 +12,7 @@ const answerButton3 = document.getElementById("answer-btn-3");
 const answerButton4 = document.getElementById("answer-btn-4");
 const nextButton = document.getElementById("next-btn");
 const answerButtons = document.getElementsByClassName("answer-btn");
-const restartButton = document.getElementById("restart-btn");
+const restartButtons = document.getElementsByClassName("restart-btn");
 const questionCounterText = document.getElementById("current-question");
 const scoreText = document.getElementById("current-score");
 const endPage = document.getElementById("end-page");
@@ -73,7 +73,10 @@ for (let i = 0; i < answerButtons.length; i++) {
 nextButton.addEventListener("click", nextQuestion);
 
 // Restart quiz
-restartButton.addEventListener("click", restartQuiz);
+for (let i = 0; i < restartButtons.length; i++) {
+    restartButtons[i].addEventListener("click", restartQuiz);
+}
+// restartButton.addEventListener("click", restartQuiz);
 
 function runQuiz() {
     homeArea.classList.add("hidden");
@@ -175,6 +178,7 @@ function incrementScore(num) {
 }
 
 function restartQuiz() {
+    endPage.classList.add("hidden");
     timerElement.innerText = 20;
     stopTimer();
     runQuiz();
