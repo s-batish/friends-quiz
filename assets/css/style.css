@@ -144,8 +144,9 @@ hr {
 
 .next-btn, .restart-btn {
     font-size: 16px;
-    width: 20vw;
+    width: 25vw;
     padding: 5px;
+    margin: 5px;
 }
 
 /* Answers */
@@ -162,6 +163,7 @@ hr {
 .bold {
     font-weight: bold;
     font-size: 18px;
+    color: rgb(243, 88, 88);
 }
 
 /* End page buttons */
@@ -176,4 +178,51 @@ hr {
     font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
     border: none;
+    font-size: 18px;
+}
+
+.score {
+    color: #3a3a3a;
+}
+
+/* Media queries */
+@media screen and (min-width: 900px) {
+    .quiz-container, .rules-area, .quiz-area, .quiz-end-page {
+        max-width: 800px;
+    }
+
+    #play-btn, #rules-btn, #high-scores-btn {
+        width: 500px;
+    }
+
+    .info-bar {
+        width: 800px;
+    }
+
+    .answer-btn {
+        width: 300px;
+    }
+
+    .answer-area {
+        font-size: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .next-btn, .restart-btn, .end-btn, #username {
+        
+        width: 250px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .next-restart-btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .score-text {
+        font-size: 20px;
+    }
 }

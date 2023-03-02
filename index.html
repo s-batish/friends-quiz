@@ -17,7 +17,7 @@
         <div>
             <button class="btn hover" id="play-btn">Play</button>
             <button class="btn hover" id="rules-btn">How to play</button>
-            <button class="btn high-scores-btn hover">High Scores</button>
+            <button class="btn high-scores-btn hover" id="high-scores-btn">High Scores</button>
         </div>
     </section>
     <!-- Start of rules -->
@@ -53,7 +53,7 @@
             <button class="btn answer-btn hover" id="answer-btn-3">Answer 3</button>
             <button class="btn answer-btn hover" id="answer-btn-4">Answer 4</button>
         </div>
-        <div>
+        <div class="next-restart-btns">
             <button class="btn next-btn hover" id="next-btn">Next</button>
             <button class="btn restart-btn hover" id="restart-btn">Restart</button>
         </div>
@@ -63,10 +63,12 @@
         <div>
             <h1>Are you the Ultimate Friends Quiz Champion?</h1>
         </div>
-        <p>You answered <span id="user-correct-questions" class="bold">1/10</span> questions correctly, giving you a score of 
-            <span id="user-score" class="bold">0</span></p>
+        <br>
+        <p class="score-text">You answered <span id="user-correct-questions" class="bold score">1/10</span> questions correctly, giving you a score of 
+            <span id="user-score" class="bold score">0</span></p>
+        <br>
         <input type="text" name="username" id="username" placeholder="username">
-        <button type="submit" class="btn end-btn hover">Save high score</button>
+        <button type="submit" class="btn end-btn hover" id="save-score-btn">Save high score</button>
         <button class="btn end-btn hover restart-btn">Play again</button>
         <button class="btn end-btn hover home-icon">Home</button>
     </section>
