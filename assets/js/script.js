@@ -25,8 +25,6 @@ let score = 0;
 let questionCounter = 0; // Displays the question the user is on
 let availableQuestions = []; // Questions removed once they are used so they are not repeated
 let correctQuestions = 0; // Increases with the increment score function
-// let timer = setInterval(startTimer, 1000);
-// let timeLeft = 20;
 let timeLeft;
 let timer;
 
@@ -60,6 +58,8 @@ for (let i = 0; i < homeIcon.length; i++) {
         endPage.classList.add("hidden");
         score = 0;
         scoreText.innerText = 0;
+        stopTimer();
+        timeLeft = 20;
     })
 }
 
@@ -73,7 +73,7 @@ answerButton4.addEventListener("click", checkAnswer);
 nextButton.addEventListener("click", nextQuestion);
 
 // Restart quiz
-restartButton.addEventListener("click", nextQuestion);
+restartButton.addEventListener("click", restartQuiz);
 
 function runQuiz() {
     homeArea.classList.add("hidden");
@@ -83,8 +83,8 @@ function runQuiz() {
     correctQuestions = 0;
     availableQuestions = [...quizQuestions]; // Full copy of questions
     getNewQuestion();
-    // timeLeft = 20;
-    startTimer()
+    timeLeft = 20;
+    startTimer();
 }
 
 function getNewQuestion() {
@@ -121,17 +121,12 @@ function getNewQuestion() {
 
 function checkAnswer() {
     // Removes hover when an answer has been clicked
-    answerButton1.classList.remove("hover");
-    answerButton2.classList.remove("hover");
-    answerButton3.classList.remove("hover");
-    answerButton4.classList.remove("hover");
-
     // Prevents user clicking any other answers once one has been clicked
-    answerButton1.setAttribute("disabled", "disabled");
-    answerButton2.setAttribute("disabled", "disabled");
-    answerButton3.setAttribute("disabled", "disabled");
-    answerButton4.setAttribute("disabled", "disabled");
-
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].classList.remove("hover");
+        answerButtons[i].setAttribute("disabled", "disabled");
+    }
+   
     // Allows users to click Next once they have answered
     nextButton.removeAttribute("disabled", "disabled");
     nextButton.classList.add("hover");
@@ -142,11 +137,9 @@ function checkAnswer() {
     if (userAnswer === correctAnswer) {
         this.classList.add("correct");
         incrementScore(correctPoints);
-        // clearInterval(timer);
         stopTimer();
     } else {
         this.classList.add("incorrect");
-        // clearInterval(timer);
         stopTimer();
     }
 }
@@ -154,22 +147,18 @@ function checkAnswer() {
 // Generates the next question and reimplements the mouse hover and the ability to click the answer buttons
 function nextQuestion() {
     timerElement.innerText = 20;
-    startTimer()
-    // timeLeft = 20;
+    startTimer();
     getNewQuestion();
-    answerButton1.classList.add("hover");
-    answerButton2.classList.add("hover");
-    answerButton3.classList.add("hover");
-    answerButton4.classList.add("hover");
-    answerButton1.removeAttribute("disabled", "disabled");
-    answerButton2.removeAttribute("disabled", "disabled");
-    answerButton3.removeAttribute("disabled", "disabled");
-    answerButton4.removeAttribute("disabled", "disabled");
+    resetAnswerButtons();
+}
 
-    // Removes the colour of the answer buttons from the previous question
+// Removes the colour of the answer buttons from the previous question
+function resetAnswerButtons() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].classList.remove("correct");
         answerButtons[i].classList.remove("incorrect");
+        answerButtons[i].classList.add("hover");
+        answerButtons[i].removeAttribute("disabled", "disabled");
     }
 }
 
@@ -181,43 +170,15 @@ function incrementScore(num) {
     correctQuestions++;
 }
 
-// function restartQuiz() {
+function restartQuiz() {
+    timerElement.innerText = 20;
+    stopTimer();
+    runQuiz();
+    scoreText.innerText = 0;
+    resetAnswerButtons();  
+}
 
-// }
-
-// function startTimer() {
-//     timeLeft = 20;
-//     timer = setInterval(function () {
-//         timerElement.innerHTML = timeLeft;
-//         timeLeft -= 1;
-//     }, 1000);
-// }
-
-// function startTimer() {
-//     timeLeft = 20;
-//     timer = setInterval(function () {
-        
-//         if (timeLeft >= 0) {
-//             timeLeft--;
-//             timerElement.innerText = timeLeft;
-//         } else {
-//             clearInterval(timer);
-//         }
-//     })
-// }
-
-// Starts timer once quiz begins
-// Code from https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
-// function startTimer() {
-//     timerElement.innerText = timeLeft;
-//     timeLeft--;
-//     if (timeLeft === -1) {
-//         clearInterval(timer);
-//     }
-// }
-
-// = setInterval(startTimer, 1000)
-
+// Timer
 // Sets timer to 20 seconds and decreases it every second
 function startTimer() {
     timeLeft = 20;
@@ -228,16 +189,14 @@ function startTimer() {
 }
 
 // Counts down from 20 seconds on each question
-// Prevetns user from clicking answer buttons once timer reaches 0, and boldens nextButton
+// Prevents user from clicking answer buttons once timer reaches 0, and boldens nextButton
 function countdown() {
-    let correctAnswer = currentQuestion.answer;
-    let answerButtons = document.getElementsByClassName("answer-btn");
+    
   
     if (timeLeft === 0) {
       stopTimer();
       nextButton.removeAttribute("disabled", "disabled");
-      nextButton.classList.add("hover");
-      nextButton.classList.add("bold");
+      nextButton.classList.add("hover", "bold");
       answerButton1.setAttribute("disabled", "disabled");
       answerButton2.setAttribute("disabled", "disabled");
       answerButton3.setAttribute("disabled", "disabled");
