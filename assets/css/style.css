@@ -163,3 +163,17 @@ hr {
     font-weight: bold;
     font-size: 18px;
 }
+
+/* End page buttons */
+.end-btn, #username {
+    font-size: 20px;
+    width: 50vw;
+    padding: 5px;
+    margin: 5px;
+}
+
+#username {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    border: none;
+}

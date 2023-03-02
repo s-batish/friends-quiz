@@ -60,11 +60,15 @@
     </section >
     <!-- Quiz end page -->    
     <section class="quiz-end-page hidden" id="end-page">
-        <div class="info-bar">
-            <div><i class="fa-solid fa-house hover home-icon"></i></div>
+        <div>
+            <h1>Are you the Ultimate Friends Quiz Champion?</h1>
         </div>
-        <p>You answered <span id="user-correct-questions">1/10</span> questions correctly, giving you a score of 
-            <span id="user-score">0</span></p>
+        <p>You answered <span id="user-correct-questions" class="bold">1/10</span> questions correctly, giving you a score of 
+            <span id="user-score" class="bold">0</span></p>
+        <input type="text" name="username" id="username" placeholder="username">
+        <button type="submit" class="btn end-btn hover">Save high score</button>
+        <button class="btn end-btn hover">Play again</button>
+        <button class="btn end-btn hover home-icon">Home</button>
     </section>
     <!-- JavaScript files -->
     <script src="assets/js/script.js"></script>
