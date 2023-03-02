@@ -1,8 +1,10 @@
+// Constants for DOM elements
 const homeArea = document.getElementById("quiz-container");
 const rulesArea = document.getElementById("rules-area");
 const openRulesBtn = document.getElementById("rules-btn");
 const returnHome = document.getElementById("home-btn");
 const playQuizBtn = document.getElementById("play-btn");
+const highScoresBtn = document.getElementById("high-scores-btn");
 const playQuiz = document.getElementById("quiz-area");
 const homeIcon = document.getElementsByClassName("home-icon");
 const questionElement = document.getElementById("question");
@@ -31,7 +33,7 @@ let correctQuestions = 0; // Increases with the increment score function
 let timeLeft;
 let timer;
 
-// Constants
+// Constants for points for answering correctly and number of questions
 const correctPoints = 10;
 const maxQuestions = 3;
 
@@ -52,6 +54,12 @@ returnHome.addEventListener("click", () => {
 // Opens quiz area
 playQuizBtn.addEventListener("click", runQuiz);
 
+// Opens high scores page
+highScoresBtn.addEventListener("click", () => {
+    highScoresPage.classList.remove("hidden");
+    homeArea.classList.add("hidden");
+})
+
 // Return home
 // Event listener loops through all of the home icons
 for (let i = 0; i < homeIcon.length; i++) {
@@ -59,6 +67,7 @@ for (let i = 0; i < homeIcon.length; i++) {
         homeArea.classList.remove("hidden");
         playQuiz.classList.add("hidden");
         endPage.classList.add("hidden");
+        highScoresPage.classList.add("hidden")
         score = 0;
         scoreText.innerText = 0;
         stopTimer();
@@ -80,7 +89,8 @@ for (let i = 0; i < restartButtons.length; i++) {
     restartButtons[i].addEventListener("click", restartQuiz);
 }
 
-// // Prevents user clicking Save Scores without inputting a username
+// Prevents user clicking Save Scores without inputting a username
+// Code from https://www.youtube.com/watch?v=o3MF_JmQxYg&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=8
 username.addEventListener("keyup", () => {
     saveScoresBtn.disabled = !username.value;
     if (username.value) {
