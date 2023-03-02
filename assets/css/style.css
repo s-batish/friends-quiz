@@ -33,7 +33,7 @@ h2 {
 }
 
 /* Same styles for home page, rules, quiz area */
-.quiz-container, .rules-area, .quiz-area, .quiz-end-page {
+.quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page {
     background-color: #a0a9d9;
     border-radius: 10px;
     width: 80vw;
@@ -187,7 +187,7 @@ hr {
 
 /* Media queries */
 @media screen and (min-width: 900px) {
-    .quiz-container, .rules-area, .quiz-area, .quiz-end-page {
+    .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page {
         max-width: 800px;
     }
 

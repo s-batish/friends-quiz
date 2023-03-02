@@ -19,6 +19,9 @@ const endPage = document.getElementById("end-page");
 const userCorrectQuestions = document.getElementById("user-correct-questions");
 const userFinalScore = document.getElementById("user-score");
 const timerElement = document.getElementById("timer");
+const saveScoresBtn = document.getElementById("save-score-btn");
+const highScoresPage = document.getElementById("high-scores-page");
+const username = document.getElementById("username");
 
 let currentQuestion = {};
 let score = 0;
@@ -76,7 +79,20 @@ nextButton.addEventListener("click", nextQuestion);
 for (let i = 0; i < restartButtons.length; i++) {
     restartButtons[i].addEventListener("click", restartQuiz);
 }
-// restartButton.addEventListener("click", restartQuiz);
+
+// // Prevents user clicking Save Scores without inputting a username
+username.addEventListener("keyup", () => {
+    saveScoresBtn.disabled = !username.value;
+    if (username.value) {
+        saveScoresBtn.classList.add("hover");
+    }
+})
+
+// // Opens high scores page
+saveScoresBtn.addEventListener("click", () => {
+    highScoresPage.classList.remove("hidden");
+    endPage.classList.add("hidden");
+})
 
 function runQuiz() {
     homeArea.classList.add("hidden");
