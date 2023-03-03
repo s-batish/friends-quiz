@@ -1,4 +1,5 @@
 # Friends Quiz
+'The One with the Ultimate Friends Quiz' is a multiple choice quiz for those interested in the TV show 'Friends'. Each game consists of 10 questions, with a 20 second timer for each question, with points being awarded for correct answers and how quickly those questions were answered, making this a game of both speed and 'Friends' knowledge.
 ## User Experience
 ### Site Owner's Goals
 - To create an interactive online quiz to test users on their knowledge of the TV show 'Friends'
