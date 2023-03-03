@@ -251,6 +251,6 @@ function goToEndPage() {
             setTimeout (function() {
                 endPage.classList.remove("hidden");
                 playQuiz.classList.add("hidden");
-            },2000);
+            }, 1000);
         }
     }

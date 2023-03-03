@@ -178,7 +178,7 @@ const quizQuestions = [
         answer: "236",
     },
     {
-        question: "What was the one state that Ross remember when he was playing the '50 states game'?",
+        question: "What was the one state that Ross forgot when he was playing the '50 states game'?",
         a: "South Dakota",
         b: "Illinois",
         c: "Missouri",
