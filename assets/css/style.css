@@ -33,7 +33,7 @@ h2 {
 }
 
 /* Same styles for home page, rules, quiz area */
-.quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page {
+.quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page, .error-page {
     background-color: #a0a9d9;
     border-radius: 10px;
     width: 80vw;

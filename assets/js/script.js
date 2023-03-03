@@ -24,6 +24,7 @@ const timerElement = document.getElementById("timer");
 const saveScoresBtn = document.getElementById("save-score-btn");
 const highScoresPage = document.getElementById("high-scores-page");
 const username = document.getElementById("username");
+const errorPage = document.getElementById("error-page");
 
 let currentQuestion = {};
 let score = 0;
@@ -67,7 +68,8 @@ for (let i = 0; i < homeIcon.length; i++) {
         homeArea.classList.remove("hidden");
         playQuiz.classList.add("hidden");
         endPage.classList.add("hidden");
-        highScoresPage.classList.add("hidden")
+        highScoresPage.classList.add("hidden");
+        errorPage.classList.add("hidden");
         score = 0;
         scoreText.innerText = 0;
         stopTimer();
