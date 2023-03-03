@@ -35,7 +35,7 @@ let timer;
 
 // Constants for points for answering correctly and number of questions
 const correctPoints = 10;
-const maxQuestions = 3;
+const maxQuestions = 10;
 
 // Event listeners
 
