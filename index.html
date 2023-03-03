@@ -9,11 +9,17 @@
     <meta name="keywords" content="quiz, friends, friends quiz">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Friends Quiz</title>
+
+    <!-- Links to display favicon in browser tabs -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 </head>
 
 <body>
     <section class="quiz-container" id="quiz-container">
-            <h1>The One with the Ultimate Friends Quiz</h1>
+        <h1>The One with the Ultimate Friends Quiz</h1>
         <div>
             <button class="btn hover" id="play-btn">Play</button>
             <button class="btn hover" id="rules-btn">How to play</button>
@@ -30,7 +36,7 @@
         <ul>
             <li>Once you have returned to the Home page, click Play</li>
             <li>You will be faced with a series of 10 questions and have 20 seconds to answer them</li>
-            <li>You will be awarded 10 points for each correct question and any time remaining on your questions will 
+            <li>You will be awarded 10 points for each correct question and any time remaining on your questions will
                 be added to your score – so try to answer the questions as quickly as you can</li>
         </ul>
         <p><strong>Good luck and enjoy!</strong></p>
@@ -59,15 +65,16 @@
             <button class="btn next-btn hover" id="next-btn">Next</button>
             <button class="btn restart-btn hover" id="restart-btn">Restart</button>
         </div>
-    </section >
+    </section>
 
-    <!-- Quiz end page -->    
+    <!-- Quiz end page -->
     <section class="quiz-end-page hidden" id="end-page">
         <div>
             <h1>Are you the Ultimate Friends Quiz Champion?</h1>
         </div>
         <br>
-        <p class="score-text">You answered <span id="user-correct-questions" class="bold score">1/10</span> questions correctly, giving you a score of 
+        <p class="score-text">You answered <span id="user-correct-questions" class="bold score">1/10</span> questions
+            correctly, giving you a score of
             <span id="user-score" class="bold score">0</span></p>
         <br>
         <input type="text" name="username" id="username" placeholder="username">
