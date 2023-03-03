@@ -162,12 +162,12 @@ function checkAnswer() {
         this.classList.add("correct");
         incrementScore(correctPoints);
         stopTimer();
+        goToEndPage()
     } else {
         this.classList.add("incorrect");
         stopTimer();
+        goToEndPage()
     }
-
-    
 }
 
 // Removes hover when an answer has been clicked
@@ -206,6 +206,7 @@ function incrementScore(num) {
 }
 
 function restartQuiz() {
+    playQuiz.classList.remove("hidden");
     endPage.classList.add("hidden");
     timerElement.innerText = 20;
     stopTimer();
@@ -242,5 +243,13 @@ function countdown() {
     clearInterval(timer);
   }
 
-// Next question timer
-// Automatically goes to next question after 5s even if user does not click next
+// End page timeout
+// Automatically goes to end page after 2s even if user does not click next
+function goToEndPage() {
+        if (questionCounter === maxQuestions) {
+            setTimeout (function() {
+                endPage.classList.remove("hidden");
+                playQuiz.classList.add("hidden");
+            },2000);
+        }
+    }
