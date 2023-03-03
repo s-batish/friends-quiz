@@ -212,7 +212,8 @@ function restartQuiz() {
     stopTimer();
     runQuiz();
     scoreText.innerText = 0;
-    resetAnswerButtons();  
+    resetAnswerButtons();
+    clearTimeout
 }
 
 // Timer
