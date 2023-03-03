@@ -185,6 +185,10 @@ hr {
     color: #3a3a3a;
 }
 
+.return-home-btn {
+    text-decoration: none;
+}
+
 /* Media queries */
 @media screen and (min-width: 900px) {
     .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page, .error-page {
@@ -210,8 +214,7 @@ hr {
         justify-content: center;
     }
 
-    .next-btn, .restart-btn, .end-btn, #username {
-        
+    .next-btn, .restart-btn, .end-btn, #username, .return-home-btn {
         width: 250px;
         padding: 10px;
         margin: 5px;
