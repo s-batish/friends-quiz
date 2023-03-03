@@ -35,7 +35,7 @@ let timer;
 
 // Constants for points for answering correctly and number of questions
 const correctPoints = 10;
-const maxQuestions = 10;
+const maxQuestions = 3;
 
 // Event listeners
 
@@ -166,6 +166,8 @@ function checkAnswer() {
         this.classList.add("incorrect");
         stopTimer();
     }
+
+    
 }
 
 // Removes hover when an answer has been clicked
@@ -239,3 +241,6 @@ function countdown() {
   function stopTimer() {
     clearInterval(timer);
   }
+
+// Next question timer
+// Automatically goes to next question after 5s even if user does not click next
