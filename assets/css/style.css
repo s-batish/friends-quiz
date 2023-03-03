@@ -167,7 +167,7 @@ hr {
 }
 
 /* End page buttons */
-.end-btn, #username {
+.end-btn, #username, .return-home-btn {
     font-size: 20px;
     width: 50vw;
     padding: 5px;
@@ -187,7 +187,7 @@ hr {
 
 /* Media queries */
 @media screen and (min-width: 900px) {
-    .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page {
+    .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page, .error-page {
         max-width: 800px;
     }
 
