@@ -118,14 +118,16 @@ function runQuiz() {
 }
 
 function getNewQuestion() {
-    
+
     // Takes user to end page once max number of questions have been reached
-    if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-        playQuiz.classList.add("hidden");
-        endPage.classList.remove("hidden");
-        userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
-        userFinalScore.innerText = score;
-    }
+    goToEndPage();
+    // if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+    //     // playQuiz.classList.add("hidden");
+    //     // endPage.classList.remove("hidden");
+    //     // userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
+    //     // userFinalScore.innerText = score;
+        
+    // }
 
     // Increments the question counter
     questionCounter++;
@@ -229,28 +231,30 @@ function startTimer() {
 // Counts down from 20 seconds on each question
 // Prevents user from clicking answer buttons once timer reaches 0, and boldens nextButton
 function countdown() {
-      if (timeLeft === 0) {
-      stopTimer();
-      disableAnswerButtons();
-      nextButton.removeAttribute("disabled", "disabled");
-      nextButton.classList.add("hover", "bold");
+    if (timeLeft === 0) {
+        stopTimer();
+        disableAnswerButtons();
+        nextButton.removeAttribute("disabled", "disabled");
+        nextButton.classList.add("hover", "bold");
     } else {
-      timeLeft--;
+        timeLeft--;
     }
-  }
-  
+}
+
 //  Stops timer
-  function stopTimer() {
+function stopTimer() {
     clearInterval(timer);
-  }
+}
 
 // End page timeout
 // Automatically goes to end page after 0.5s
 function goToEndPage() {
-        if (questionCounter === maxQuestions) {
-            setTimeout (function() {
-                endPage.classList.remove("hidden");
-                playQuiz.classList.add("hidden");
-            }, 500);
-        } 
+    if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+        setTimeout(function () {
+            endPage.classList.remove("hidden");
+            playQuiz.classList.add("hidden");
+            userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
+            userFinalScore.innerText = score;
+        }, 500);
     }
+}
