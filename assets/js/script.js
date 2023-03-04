@@ -245,12 +245,12 @@ function countdown() {
   }
 
 // End page timeout
-// Automatically goes to end page after 2s even if user does not click next
+// Automatically goes to end page after 0.5s
 function goToEndPage() {
         if (questionCounter === maxQuestions) {
             setTimeout (function() {
                 endPage.classList.remove("hidden");
                 playQuiz.classList.add("hidden");
-            }, 1000);
-        }
+            }, 500);
+        } 
     }
