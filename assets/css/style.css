@@ -195,7 +195,7 @@ hr {
         max-width: 800px;
     }
 
-    #play-btn, #rules-btn, #high-scores-btn {
+    #play-btn, #rules-btn, #high-scores-btn, .rules-area #home-btn {
         width: 500px;
     }
 
