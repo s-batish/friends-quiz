@@ -14,6 +14,16 @@
 ### Wireframes
 Balsamiq wireframes were created for mobile, tablet and desktop devices to show the structure and overall design of each page of the quiz.
 
+[Home page wireframe](docs/wireframes/homepage.png)
+
+[Rules page wireframe](docs/wireframes/rules-page.png)
+
+[Questions page wireframe](docs/wireframes/questions-page.png)
+
+[End page wireframe](docs/wireframes/end-page.png)
+
+[High scores page wireframe]
+
 ### Colour Scheme
 The purple and yellow colours have been used because of their connotations with the TV show 'Friends' and so have been chosen to tie into the theme of the quiz and also because they would be instantly recognisable colours to a fan of the programme.
 ### Typography
