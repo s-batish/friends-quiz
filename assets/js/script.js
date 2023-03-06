@@ -91,17 +91,22 @@ for (let i = 0; i < restartButtons.length; i++) {
 
 // Prevents user clicking Save Scores without inputting a username
 // Code from https://www.youtube.com/watch?v=o3MF_JmQxYg&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=8
-username.addEventListener("keyup", () => {
-    saveScoresBtn.disabled = !username.value;
-    if (username.value) {
-        saveScoresBtn.classList.add("hover");
-    }
-})
+// username.addEventListener("keyup", () => {
+//     saveScoresBtn.disabled = !username.value;
+//     if (username.value) {
+//         saveScoresBtn.classList.add("hover");
+//     }
+// })
 
 // // Opens high scores page
 saveScoresBtn.addEventListener("click", () => {
-    highScoresPage.classList.remove("hidden");
-    endPage.classList.add("hidden");
+    if (!username.value) {
+        username.setCustomValidity("Please enter a username to save your high score");
+    } else {
+        highScoresPage.classList.remove("hidden");
+        endPage.classList.add("hidden");
+    }
+    username.reportValidity();
 })
 
 function runQuiz() {
@@ -126,7 +131,7 @@ function getNewQuestion() {
     //     // endPage.classList.remove("hidden");
     //     // userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
     //     // userFinalScore.innerText = score;
-        
+
     // }
 
     // Increments the question counter
