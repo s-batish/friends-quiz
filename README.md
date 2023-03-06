@@ -51,4 +51,10 @@ The purple and yellow colours have been used because of their connotations with 
 The live link can be found here: 
 ## Credits
 ### Content
+- The quiz questions and answers were written by myself, with inspiration from the book 'Mental Perk A Friends Quiz Book'.
+- The fonts were chosen with [Font Joy](https://fontjoy.com/).
+- The icons at the top of the main quiz page are from [Font Awesome](https://fontawesome.com/icons).
+- The favicon is from [Favicon](https://favicon.io/).
 ### Media
+- The background image is from [Unsplash](https://unsplash.com/).
+### Code
