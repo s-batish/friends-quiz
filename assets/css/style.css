@@ -189,6 +189,15 @@ hr {
     text-decoration: none;
 }
 
+/* High scores page */
+#high-scores-list {
+    list-style: none;
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+}
+
 /* Media queries */
 @media screen and (min-width: 900px) {
     .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page, .error-page {

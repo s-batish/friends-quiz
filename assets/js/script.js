@@ -265,10 +265,12 @@ function goToEndPage() {
     }
 }
 
-// function saveHighScore() {
-//     console.log("clicked")
-// }
 
+// High scores page
+// Code from https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10
+
+// JSON.parse to covert string into an array
+// Gets high scores from local storage or returns an empty array if there is nothing there
 const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
 const highScoresList = document.getElementById("high-scores-list");
 const maxHighScores = 5 // Maximum number of high scores shown
@@ -289,23 +291,3 @@ function saveHighScore() {
     })
     .join("")
 }
-
-// const highScoresList = document.getElementById('high-scores-list');
-
-// function saveHighScore() {
-
-//     //add our array value to highScores variable
-//     const storedHighScore = {
-//         score: score,
-//         name: username.value
-//     };
-//     highScores.push(storedHighScore);
-//     highScores.sort((one, two) => two.score - one.score); //sorts score in descending order
-//     highScores.splice(5);
-//     localStorage.setItem("highscores", JSON.stringify(highScores));
-
-//     //takes our highScore array and converts it to a string html
-//     highScoresList.innerHTML = highScores.map(highScores => {
-//         return `<li class="high-score">${highScores.name} - ${highScores.score}</li>`;
-//     }).join("");
-// }
