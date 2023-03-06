@@ -105,6 +105,7 @@ saveScoresBtn.addEventListener("click", () => {
     } else {
         highScoresPage.classList.remove("hidden");
         endPage.classList.add("hidden");
+        saveHighScore();
     }
     username.reportValidity();
 })
@@ -263,3 +264,48 @@ function goToEndPage() {
         }, 500);
     }
 }
+
+// function saveHighScore() {
+//     console.log("clicked")
+// }
+
+const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+const highScoresList = document.getElementById("high-scores-list");
+const maxHighScores = 5 // Maximum number of high scores shown
+
+function saveHighScore() {
+    const highScore = {
+        score : score,
+        name: username.value
+    };
+    highScores.push(highScore);
+    highScores.sort((a,b) => b.score - a.score); // Sorts scores into descending order
+    highScores.splice(5); // Only shows 5 high scores
+
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+
+    highScoresList.innerHTML = highScores.map(score => {
+        return `<li class="high-score">${score.name} - ${score.score}</li>`;
+    })
+    .join("")
+}
+
+// const highScoresList = document.getElementById('high-scores-list');
+
+// function saveHighScore() {
+
+//     //add our array value to highScores variable
+//     const storedHighScore = {
+//         score: score,
+//         name: username.value
+//     };
+//     highScores.push(storedHighScore);
+//     highScores.sort((one, two) => two.score - one.score); //sorts score in descending order
+//     highScores.splice(5);
+//     localStorage.setItem("highscores", JSON.stringify(highScores));
+
+//     //takes our highScore array and converts it to a string html
+//     highScoresList.innerHTML = highScores.map(highScores => {
+//         return `<li class="high-score">${highScores.name} - ${highScores.score}</li>`;
+//     }).join("");
+// }
