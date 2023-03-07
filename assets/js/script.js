@@ -58,6 +58,11 @@ playQuizBtn.addEventListener("click", runQuiz);
 highScoresBtn.addEventListener("click", () => {
     highScoresPage.classList.remove("hidden");
     homeArea.classList.add("hidden");
+    // Maps the high scores from local storage
+    highScoresList.innerHTML = highScores.map(highScore => {
+        return `<li class="high-score">${highScore.name} - ${highScore.score}</li>`;
+    })
+    .join("");
 });
 
 // Return home
@@ -89,16 +94,7 @@ for (let i = 0; i < restartButtons.length; i++) {
     restartButtons[i].addEventListener("click", restartQuiz);
 }
 
-// Prevents user clicking Save Scores without inputting a username
-// Code from https://www.youtube.com/watch?v=o3MF_JmQxYg&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=8
-// username.addEventListener("keyup", () => {
-//     saveScoresBtn.disabled = !username.value;
-//     if (username.value) {
-//         saveScoresBtn.classList.add("hover");
-//     }
-// })
-
-// // Opens high scores page
+// Opens high scores page
 saveScoresBtn.addEventListener("click", () => {
     if (!username.value) {
         username.setCustomValidity("Please enter a username to save your high score");
@@ -110,6 +106,7 @@ saveScoresBtn.addEventListener("click", () => {
     username.reportValidity();
 });
 
+// Function to begin the quiz
 function runQuiz() {
     homeArea.classList.add("hidden");
     playQuiz.classList.remove("hidden");
@@ -123,17 +120,10 @@ function runQuiz() {
     resetAnswerButtons();
 }
 
+// Function to randomly generate the questions
 function getNewQuestion() {
-
     // Takes user to end page once max number of questions have been reached
     goToEndPage();
-    // if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-    //     // playQuiz.classList.add("hidden");
-    //     // endPage.classList.remove("hidden");
-    //     // userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
-    //     // userFinalScore.innerText = score;
-
-    // }
 
     // Increments the question counter
     questionCounter++;
@@ -156,6 +146,7 @@ function getNewQuestion() {
     nextButton.classList.remove("hover", "bold");
 }
 
+// Function to check whether the answer is correct or not
 function checkAnswer() {
     disableAnswerButtons();
 
@@ -213,6 +204,7 @@ function incrementScore(num) {
     correctQuestions++;
 }
 
+// Function to restart the quiz, taking the quiz back to its original state
 function restartQuiz() {
     playQuiz.classList.remove("hidden");
     endPage.classList.add("hidden");
@@ -254,6 +246,7 @@ function stopTimer() {
 
 // End page timeout
 // Automatically goes to end page after 0.5s
+// setTimeout method from https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
 function goToEndPage() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         setTimeout(function () {
@@ -270,9 +263,8 @@ function goToEndPage() {
 
 // JSON.parse to covert string into an array
 // Gets high scores from local storage or returns an empty array if there is nothing there
-const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const highScoresList = document.getElementById("high-scores-list");
-
 
 function saveHighScore() {
     const highScore = {
@@ -285,8 +277,8 @@ function saveHighScore() {
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    highScoresList.innerHTML = highScores.map(score => {
-        return `<li class="high-score">${score.name} - ${score.score}</li>`;
+    highScoresList.innerHTML = highScores.map(highScores => {
+        return `<li class="high-score">${highScores.name} - ${highScores.score}</li>`;
     })
-    .join("");
+.join("");
 }
