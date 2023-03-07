@@ -1,5 +1,9 @@
 # Friends Quiz
 'The One with the Ultimate Friends Quiz' is a multiple choice quiz for those interested in the TV show 'Friends'. Each game consists of 10 questions, with a 20 second timer for each question, with points being awarded for correct answers and how quickly those questions were answered, making this a game of both speed and 'Friends' knowledge.
+
+![Friends quiz shown on a range of devices](docs/friends-quiz.png)
+
+[View the live site here](https://s-batish.github.io/friends-quiz/)
 ## User Experience
 ### Site Owner's Goals
 - To create an interactive online quiz to test users on their knowledge of the TV show 'Friends'
@@ -22,7 +26,7 @@ Balsamiq wireframes were created for mobile, tablet and desktop devices to show 
 
 [End page wireframe](docs/wireframes/end-page.png)
 
-[High scores page wireframe]
+[High scores page wireframe](docs/wireframes/high-scores-page.png)
 
 ### Colour Scheme
 The purple and yellow colours have been used because of their connotations with the TV show 'Friends' and so have been chosen to tie into the theme of the quiz and also because they would be instantly recognisable colours to a fan of the programme.
@@ -31,6 +35,30 @@ The purple and yellow colours have been used because of their connotations with 
 - 'Cherry Swash' has been used for the headings, buttons and questions, and 'Montserrat' has been used for the answers and paragraph elements because they complement each other quite well and create an easy to read, but visually appealing quiz.
 ## Features
 ## Technologies
+- HTML
+    - Used to create the structure of the quiz
+- CSS
+    - Used to implement styling across the quiz
+- JavaScript
+    - Used to create interactivity throughout the quiz
+- Gitpod
+    - Used to develop and edit the code
+- Git
+    - Used to add, commit and push the code
+- Github
+    - Used to store and deploy the code
+- [Balsamiq](https://balsamiq.com/)
+    - Used to create wireframes
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import fonts
+- [Font Awesome](https://fontawesome.com/icons)
+    - Used icons from this website as the icons on the main quiz page
+- [Fontjoy](https://fontjoy.com/)
+    - Used to create the font pairings used on the website
+- [TinyPNG](https://tinypng.com/)
+    - Used to reduce the size of the background image
+- [Favicon](https://favicon.io/)
+    - Used to create a favicon
 ## Testing
 ### Responsiveness
 ### Accessibility
