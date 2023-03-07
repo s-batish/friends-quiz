@@ -239,20 +239,75 @@ hr {
     }
 }
 
+@media screen and (max-height: 414px) and (max-width: 896px) and (orientation: landscape) {
+    .quiz-container, .rules-area,.high-scores-page, .error-page {
+        height: 45vw;
+    }
+
+    .quiz-area, .quiz-end-page {
+        height: 35vw;
+    }
+
+    .answer-area {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .answer-btn {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-height: 390px) and (orientation: landscape) {
+    .quiz-end-page {
+        height: 40vw;
+    }
+}
+
+@media screen and (max-height: 375px) and (orientation: landscape){
+    .btn {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .quiz-area {
+        height: 47vw;
+    }
+
+    .end-page-area {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .end-btn, #username {
+        width: 25vw;
+        margin: 7px;
+    }
+}
+
 @media screen and (max-height: 280px) and (orientation: landscape) {
     .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page, .error-page {
         height: 40vw;
     }
 
-    .answer-area, .home-screen-area, .end-page-area {
+    .home-screen-area, .end-page-area {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .answer-btn, #play-btn, #rules-btn, #high-scores-btn, #username, #save-score-btn, #end-restart-btn, #end-home-btn {
+    .answer-btn, #play-btn, #rules-btn, #high-scores-btn, #username, .end-btn {
         width: 200px;
+        padding: 7px;
+        margin: 7px;
+    }
+
+    .next-btn, .restart-btn {
         padding: 7px;
         margin: 7px;
     }
@@ -271,3 +326,4 @@ hr {
         margin: 5px;
     }
 }
+
