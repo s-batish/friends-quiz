@@ -192,6 +192,7 @@ hr {
 /* High scores page */
 #high-scores-list {
     list-style: none;
+    font-size: 18px;
 }
 
 .high-score:hover {
@@ -223,10 +224,15 @@ hr {
         justify-content: center;
     }
 
-    .next-btn, .restart-btn, .end-btn, #username, .return-home-btn {
+    .next-btn, .restart-btn, .return-home-btn {
         width: 250px;
         padding: 10px;
         margin: 5px;
+    }
+
+    .end-btn, #username {
+        width: 380px;
+        padding: 5px;
     }
 
     .next-restart-btns {
@@ -239,6 +245,7 @@ hr {
     }
 }
 
+/* Media queries for devices in landscape mode */
 @media screen and (max-height: 414px) and (max-width: 896px) and (orientation: landscape) {
     .quiz-container, .rules-area,.high-scores-page, .error-page {
         height: 45vw;

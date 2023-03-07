@@ -261,7 +261,7 @@ function goToEndPage() {
             playQuiz.classList.add("hidden");
             userCorrectQuestions.innerText = `${correctQuestions}/${maxQuestions}`;
             userFinalScore.innerText = score;
-        }, 500);
+        }, 250);
     }
 }
 
