@@ -201,4 +201,4 @@ const quizQuestions = [
         d: "A secret note",
         answer: "A thumb",
     },
-]
+];

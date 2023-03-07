@@ -43,7 +43,7 @@ const maxQuestions = 3;
 openRulesBtn.addEventListener("click", () => {
     homeArea.classList.add("hidden");
     rulesArea.classList.remove("hidden");
-})
+});
 
 // Close rules area
 returnHome.addEventListener("click", () => {
@@ -58,7 +58,7 @@ playQuizBtn.addEventListener("click", runQuiz);
 highScoresBtn.addEventListener("click", () => {
     highScoresPage.classList.remove("hidden");
     homeArea.classList.add("hidden");
-})
+});
 
 // Return home
 // Event listener loops through all of the home icons
@@ -72,7 +72,7 @@ for (let i = 0; i < homeIcon.length; i++) {
         scoreText.innerText = 0;
         stopTimer();
         timeLeft = 20;
-    })
+    });
 }
 
 // Checks answers
@@ -108,7 +108,7 @@ saveScoresBtn.addEventListener("click", () => {
         saveHighScore();
     }
     username.reportValidity();
-})
+});
 
 function runQuiz() {
     homeArea.classList.add("hidden");
@@ -170,11 +170,11 @@ function checkAnswer() {
         this.classList.add("correct");
         incrementScore(correctPoints);
         stopTimer();
-        goToEndPage()
+        goToEndPage();
     } else {
         this.classList.add("incorrect");
         stopTimer();
-        goToEndPage()
+        goToEndPage();
     }
 }
 
@@ -221,7 +221,7 @@ function restartQuiz() {
     runQuiz();
     scoreText.innerText = 0;
     resetAnswerButtons();
-    clearTimeout
+    clearTimeout();
 }
 
 // Timer
@@ -273,7 +273,7 @@ function goToEndPage() {
 // Gets high scores from local storage or returns an empty array if there is nothing there
 const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
 const highScoresList = document.getElementById("high-scores-list");
-const maxHighScores = 5 // Maximum number of high scores shown
+
 
 function saveHighScore() {
     const highScore = {
@@ -289,5 +289,5 @@ function saveHighScore() {
     highScoresList.innerHTML = highScores.map(score => {
         return `<li class="high-score">${score.name} - ${score.score}</li>`;
     })
-    .join("")
+    .join("");
 }
