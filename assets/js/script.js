@@ -35,7 +35,7 @@ let timer;
 
 // Constants for points for answering correctly and number of questions
 const correctPoints = 10;
-const maxQuestions = 3;
+const maxQuestions = 10;
 
 // Event listeners
 
@@ -264,7 +264,6 @@ function goToEndPage() {
         }, 250);
     }
 }
-
 
 // High scores page
 // Code from https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10

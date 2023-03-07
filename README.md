@@ -34,6 +34,42 @@ The purple and yellow colours have been used because of their connotations with 
 - The font 'Gloria Hallelujah' has been used for the title of the quiz because of its similarity to the 'Friends' logo.
 - 'Cherry Swash' has been used for the headings, buttons and questions, and 'Montserrat' has been used for the answers and paragraph elements because they complement each other quite well and create an easy to read, but visually appealing quiz.
 ## Features
+This quiz has been designed to be both entertaining and easy to use, and as such, the features that have been implemented across the game support this objective.
+### Home page
+-  This is what the user will be greeted with upon opening the quiz, and also what they will return to any time they click a button to return Home.
+- It is an easy to navigate Home page, with the title of the quiz at the top, and 3 buttons below:
+    
+    - A Play button to start the quiz
+    - A how to play button to take the user to the rules of the game
+    - A High Scores button to take the user to the high scores page
+
+<details><summary>Desktop home page</summary>
+
+![Desktop home page](docs/features/home-page-desktop.png)
+</details>
+<details><summary>Mobile home page</summary>
+
+![Mobile home page](docs/features/home-page-mobile.png)
+</details>
+
+### How to play section
+- This section gives the user clear instructions about how the game works, including how many questions there are, how many seconds the user has to answer each question, and how the user's scores will be incremented.
+- There is also a Home button at the bottom to allow the user to return to the Home page.
+
+<details><summary>Desktop how to play section</summary>
+
+![Desktop home page](docs/features/how-to-play-desktop.png)
+</details>
+<details><summary>Mobile how to play section</summary>
+
+![Mobile home page](docs/features/how-to-play-mobile.png)
+</details>
+
+### High scores section
+### Quiz section
+- Info bar
+### End page section
+
 ## Technologies
 - HTML
     - Used to create the structure of the quiz
