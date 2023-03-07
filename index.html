@@ -15,15 +15,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <!-- <link rel="manifest" href="assets/favicon/site.webmanifest"> -->
-    
-   
-    
 </head>
 
 <body>
     <section class="quiz-container" id="quiz-container">
         <h1>The One with the Ultimate Friends Quiz</h1>
-        <div>
+        <div class="home-screen-area">
             <button class="btn hover" id="play-btn">Play</button>
             <button class="btn hover" id="rules-btn">How to play</button>
             <button class="btn high-scores-btn hover" id="high-scores-btn">High Scores</button>
@@ -80,10 +77,12 @@
             correctly, giving you a score of
             <span id="user-score" class="bold score">0</span></p>
         <br>
-        <input type="text" required name="username" id="username" placeholder="Username">
-        <button type="submit" class="btn end-btn hover" id="save-score-btn">Save high score</button>
-        <button class="btn end-btn hover restart-btn">Play again</button>
-        <button class="btn end-btn hover home-icon">Home</button>
+        <div class="end-page-area">
+            <input type="text" required name="username" id="username" placeholder="Username">
+            <button type="submit" class="btn end-btn hover" id="save-score-btn">Save high score</button>
+            <button class="btn end-btn hover restart-btn" id="end-restart-btn">Play again</button>
+            <button class="btn end-btn hover home-icon" id="end-home-btn">Home</button>
+        </div>
     </section>
 
     <!-- High Scores section -->

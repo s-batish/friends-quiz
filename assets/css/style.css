@@ -238,3 +238,36 @@ hr {
         font-size: 20px;
     }
 }
+
+@media screen and (max-height: 280px) and (orientation: landscape) {
+    .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page, .error-page {
+        height: 40vw;
+    }
+
+    .answer-area, .home-screen-area, .end-page-area {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .answer-btn, #play-btn, #rules-btn, #high-scores-btn, #username, #save-score-btn, #end-restart-btn, #end-home-btn {
+        width: 200px;
+        padding: 7px;
+        margin: 7px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    
+    .rules-area p, .rules-area ul {
+        font-size: 12px;
+    }
+
+    .rules-area #home-btn {
+        font-size: 16px;
+        width: 10vw;
+        margin: 5px;
+    }
+}
