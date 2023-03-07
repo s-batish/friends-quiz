@@ -24,6 +24,7 @@ const timerElement = document.getElementById("timer");
 const saveScoresBtn = document.getElementById("save-score-btn");
 const highScoresPage = document.getElementById("high-scores-page");
 const username = document.getElementById("username");
+const clearScoresBtn = document.getElementById("clear-high-scores")
 
 let currentQuestion = {};
 let score = 0;
@@ -105,6 +106,9 @@ saveScoresBtn.addEventListener("click", () => {
     }
     username.reportValidity();
 });
+
+// Clears the high scores
+clearScoresBtn.addEventListener("click", clearHighScore);
 
 // Function to begin the quiz
 function runQuiz() {
@@ -281,4 +285,12 @@ function saveHighScore() {
         return `<li class="high-score">${highScores.name} - ${highScores.score}</li>`;
     })
 .join("");
+}
+
+// Function to clear high scores and reloads the window
+// Code to clear local storage from https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript
+// Code to reload the window from https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/
+function clearHighScore() {
+    localStorage.clear();
+    window.location.reload();
 }
