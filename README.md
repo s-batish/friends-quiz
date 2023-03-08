@@ -58,11 +58,11 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 
 <details><summary>Desktop how to play section</summary>
 
-![Desktop home page](docs/features/how-to-play-desktop.png)
+![Desktop how to play section](docs/features/how-to-play-desktop.png)
 </details>
 <details><summary>Mobile how to play section</summary>
 
-![Mobile home page](docs/features/how-to-play-mobile.png)
+![Mobile how to play section](docs/features/how-to-play-mobile.png)
 </details>
 
 ### High scores section
@@ -73,16 +73,94 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 
 <details><summary>Desktop high scores page</summary>
 
-![Desktop home page](docs/features/high-scores-page-desktop.png)
+![Desktop high scores page](docs/features/high-scores-page-desktop.png)
 </details>
 <details><summary>Mobile high scores page</summary>
 
-![Mobile home page](docs/features/high-scores-page-mobile.png)
+![Mobile high scores page](docs/features/high-scores-page-mobile.png)
 </details>
 
 ### Quiz section
-- Info bar
+- When the user presses the play button they will be taken to the main quiz area, which displays 1 random question from the quizQuestions array and the 4 corresponding answer buttons.
+- Below the answer buttons there is a Next button, which the user has to click to go to the next question, and a Restart button, which restarts the quiz, resetting the question counter to 1 and the timer and score to 0.
+
+<details><summary>Desktop quiz section</summary>
+
+![Desktop quiz section](docs/features/quiz-section-desktop.png)
+</details>
+<details><summary>Mobile quiz section</summary>
+
+![Mobile quiz page](docs/features/quiz-section-mobile.png)
+</details>
+
+- If the user answers the question correctly, the answer button that they clicked on will change colour to green, and all of the answer buttons will become disabled, preventing the user from clicking on them.
+
+<details><summary>Desktop correct answer</summary>
+
+![Desktop correct answer](docs/features/correct-answer-desktop.png)
+</details>
+<details><summary>Mobile correct answer</summary>
+
+![Mobile correct answer](docs/features/correct-answer-mobile.png)
+</details>
+
+- If the user answers the question incorrectly, the answer button that they clicked on will change colour to red, and all of the answer buttons will become disabled, preventing the user from clicking on them.
+
+<details><summary>Desktop incorrect answer</summary>
+
+![Desktop incorrect answer](docs/features/incorrect-answer-desktop.png)
+</details>
+<details><summary>Mobile incorrect answer</summary>
+
+![Mobile incorrect answer](docs/features/incorrect-answer-mobile.png)
+</details>
+
+#### Info bar
+- The info bar on the quiz section has 4 font awesome icons to represent different functions on the quiz:
+
+    - The home icon is a button that takes the user back to the Home page
+    - The question mark icon displays the question number that the user is on out of the maximum number of questions
+        - The maximum number of questions displayed in the quiz can be changed by changing the number in the maxQuestions variable in the script.js page.
+    - The timer icon is a timer that counts down from 20 seconds on each question
+    - The trophy icon tells the user the total amount of points they have scored during the quiz. This number is calculated by giving the user 10 points for the correct question and adding the time that they have remaining on the timer once they have answered the question.
+        - The amount of points given for a correct answer (in this case 10 points) can be changed by changing the number in the correctPoints variable in the script.js page.
+
+<details><summary>Desktop info bar</summary>
+
+![Desktop info bar](docs/features/info-bar-desktop.png)
+</details>
+<details><summary>Mobile info bar</summary>
+
+![Mobile info bar](docs/features/info-bar-mobile.png)
+</details>
+
 ### End page section
+- Once the user finishes the quiz they are automatically taken to the end page that tells them how many questions they answered correctly and how many points they got.
+- Below this there is a space for the user to add their username in order to save their scores to the High Scores page. The username input has a required attribute which means the user cannot click the Save high scores button without inputting a username. A custom validity has also been added to present the user with a message telling them to input their username.
+
+<details><summary>Desktop username input</summary>
+
+![Desktop username input](docs/features/username-desktop.png)
+</details>
+<details><summary>Mobile username input</summary>
+
+![Mobile username input](docs/features/username-mobile.png)
+</details>
+
+- Below the username input area there are three buttons
+    - A Save High Score button which saves the user's high score and takes them to the High Scores page
+    - A Play again button which restarts the quiz
+    - A Home button which takes the user back to the home page
+
+<details><summary>Desktop End page</summary>
+
+![Desktop End page](docs/features/end-page-desktop.png)
+</details>
+<details><summary>Mobile End page</summary>
+
+![Mobile End page](docs/features/end-page-mobile.png)
+</details>
+
 ### 404 page
 - The 404 page has been included in case the user directs to a broken link. It has a return home button to take the user back to the main home page without the need to click the back button on their browser.
 
