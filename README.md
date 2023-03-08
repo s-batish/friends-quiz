@@ -10,10 +10,13 @@
 - To enable users to compete against their friends and family through the High Scores section, which makes it easy for users to see their previous scores and improve
 - To provide a fully responsive quiz that can be played on a range of devices
 ### External User's Goals
-- To play a fun and interactive online quiz to test their 'Friends' knowledge
-- To save their high scores to improve when they play again
+- To play a fun and interactive online quiz to my my 'Friends' knowledge
+- To save my high scores and view them in a leaderboard
 - To have clear instructions about the rules of the game and how the scoring works
 - To easily navigate the site and to have a way to return to the Home page at any point of the quiz
+- To be able to restart the quiz at any point while I am playing the game
+- To see what question number I am on and how many questions I have left
+- To see how long I have left to answer the question
 ## Design
 ### Wireframes
 Balsamiq wireframes were created for mobile, tablet and desktop devices to show the structure and overall design of each page of the quiz.
@@ -105,6 +108,7 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 </details>
 
 - If the user answers the question incorrectly, the answer button that they clicked on will change colour to red, and all of the answer buttons will become disabled, preventing the user from clicking on them.
+- The correct answer will not turn green if the user gets the question wrong to allow them to play the quiz again without knowing the correct answer.
 
 <details><summary>Desktop incorrect answer</summary>
 
@@ -173,6 +177,12 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 ![Mobile home page](docs/features/404-page-mobile.png)
 </details>
 
+### Future Features
+- While I was making the high scores page on this quiz, I did look into saving the high scores to a Firebase database, as suggested by my mentor, as this would prevent the high scores from disappearing on different devices, as is the case with saving scores to local storage, and would mean that users would have greater competition by comparing their scores against anyone playing the quiz. However, given that I had never used this system before and that I had already implemented a local storage high scores page, I decided not to implement this feature in this project. However, with more time and knowledge of Firebase this is definitely something that I would want to add to this quiz.
+- I would also want to add different levels to the quiz to allow the user to choose between easy, medium and hard questions, as right now the questions are a mix of all three categories, so I think that having different levels would create a more engaging experience for the quiz's users.
+- Sound effects are another aspect that I think would make the quiz more engaging for users, for instance different sound effects when the user got a question correct or incorrect.
+- Creating a function to shuffle the answer buttons would also be a good future feature to implement as this would ensure that the answer buttons do not appear in the same spaces everytime the same question is shown.
+
 ## Technologies
 - HTML
     - Used to create the structure of the quiz
@@ -207,6 +217,20 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 ### Lighthouse Testing
 ### Manual Testing
 ### Testing User Stories
+- Expectation: To play a fun and interactive online quiz to my my 'Friends' knowledge
+    - Result: The site is an engaging way to test the user's 'Friends' knowledge thanks to the range of questions presented in the quiz that are all varying levels of difficulty.
+- Expectation: To save my high scores and view them in a leaderboard
+    - Result: Once the quiz is complete, the user is taken to the end page where they can input their username to save their scores, and this can be viewed on the High Scores page.
+- Expectation: To have clear instructions about the rules of the game and how the scoring works
+    - Result: The How to play section provides clear instructions about the rules of the game and explains how the scores are calculated.
+- Expectation: To easily navigate the site and to have a way to return to the Home page at any point of the quiz
+    - Result: The buttons on the quiz clearly explain what they do and there are Home buttons found on all of the sections of the quiz to allow the user to return to the Home page whenever they want.
+- Expectation: To be able to restart the quiz at any point while I am playing the game
+    - The Restart button on the quiz section allows the user to easily restart the quiz without having to return to the Home page and then starting the quiz again.
+- Expectation: To see what question number I am on and how many questions I have left
+    - The question counter on the info bar of the quiz clearly shows what question out of the maximum number of questions the user is on.
+- Expectation: To see how long I have left to answer the question
+    - Result: The timer on the info bar of the quiz shows how many seconds the user has left and once the timer reaches 0, the Next button will be highlighted signalling that the user has to move on.
 ### Solved Bugs
 ## Deployment
 - The website was deployed to Github pages. The steps to deploy are as follows:
