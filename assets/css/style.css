@@ -245,6 +245,22 @@ hr {
     }
 }
 
+/* Media queries for devices with a max height of 568px */
+@media screen and (max-height: 568px) {
+    .rules-area p, .rules-area ul {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .rules-area #home-btn {
+        font-size: 18px;
+        margin: 5px;
+    }
+}
+
 /* Media queries for devices in landscape mode */
 @media screen and (max-height: 414px) and (max-width: 896px) and (orientation: landscape) {
     .quiz-container, .rules-area,.high-scores-page, .error-page {
@@ -279,8 +295,14 @@ hr {
         margin: 10px;
     }
 
-    .quiz-area {
+    .quiz-area, .rules-area {
         height: 47vw;
+    }
+
+    .rules-area #home-btn {
+        width: 20vw;
+        font-size: 18px;
+        margin: 5px;
     }
 
     .end-page-area {
@@ -333,4 +355,5 @@ hr {
         margin: 5px;
     }
 }
+
 
