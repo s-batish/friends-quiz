@@ -66,9 +66,34 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 </details>
 
 ### High scores section
+- This page displays the top 5 high scores in order from the highest at the top, to the 5th highest at the bottom.
+- As the scores are only saved to local storage, users can only compete with those who play on the same device.
+- There is a Clear high scores button which will clear the local storage and reload the window, taking the user back to the home page once this is clicked.
+- The user can also move their mouse over each of the high scores which will enlarge them slightly as the mouse is hovering over it, which draws a bit more attention to the high score that the user is looking at.
+
+<details><summary>Desktop high scores page</summary>
+
+![Desktop home page](docs/features/high-scores-page-desktop.png)
+</details>
+<details><summary>Mobile high scores page</summary>
+
+![Mobile home page](docs/features/high-scores-page-mobile.png)
+</details>
+
 ### Quiz section
 - Info bar
 ### End page section
+### 404 page
+- The 404 page has been included in case the user directs to a broken link. It has a return home button to take the user back to the main home page without the need to click the back button on their browser.
+
+<details><summary>Desktop 404 page</summary>
+
+![Desktop home page](docs/features/404-page-desktop.png)
+</details>
+<details><summary>Mobile 404 page</summary>
+
+![Mobile home page](docs/features/404-page-mobile.png)
+</details>
 
 ## Technologies
 - HTML
