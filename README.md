@@ -213,6 +213,12 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 - The website has been tested on Chrome, Edge and Firefox as well as on an iPhone 11, iPhone 13 mini, Samsung Galaxy S22, and iPad 6th Generation in order to check the responsiveness on different devices and different browsers.
 - Each section of the quiz was also tested on the [Responsive Design Checker website](https://responsivedesignchecker.com/), and on Chrome and Firefox developer tools, to ensure that the quiz is responsive on a range of mobile, tablet and desktop devices.
 ### Accessibility
+- [Wave accessibility tool](https://wave.webaim.org/) was used to check how accessible the quiz is. No errors were found, and the only alert mentioned that there were no page regions found on the site. Given that this website is a quiz game, it was not necessary to have regions like a header, nav bar or footer, as the entire body of the quiz is contained within the purple section in the centre of the page.
+<details><summary>Wave results</summary>
+
+![Wave results](docs/testing/wave.png)
+</details>
+
 ### Validator Testing
 ### Lighthouse Testing
 ### Manual Testing
@@ -249,5 +255,10 @@ The live link can be found here:
 - The icons at the top of the main quiz page are from [Font Awesome](https://fontawesome.com/icons).
 - The favicon is from [Favicon](https://favicon.io/).
 ### Media
-- The background image is from [Unsplash](https://unsplash.com/).
+- The background image is from [Unsplash](https://unsplash.com/photos/QZ7dTMf_cqQ).
 ### Code
+- James Q Quick's [youtube tutorials](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) were used to help implement various elements of this quiz, such as adding the button hover shadow, creating the high scores function and how to randomly generate the questions, which have been noted in the script.js code.
+- [Free Code Camp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/) was used to help show me how to make a modal.
+- [Free Code Camp](https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/) was also used to show me how to reload the window.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity) was used to show me how to set a custom validity for the username.
+- [Stack Overflow](https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript) was used to show me how to clear the local storage.
