@@ -200,6 +200,8 @@ This quiz has been designed to be both entertaining and easy to use, and as such
     - Used to create a favicon
 ## Testing
 ### Responsiveness
+- The website has been tested on Chrome, Edge and Firefox as well as on an iPhone 11, iPhone 13 mini, Samsung Galaxy S22, and iPad 6th Generation in order to check the responsiveness on different devices and different browsers.
+- Each section of the quiz was also tested on the [Responsive Design Checker website](https://responsivedesignchecker.com/), and on Chrome and Firefox developer tools, to ensure that the quiz is responsive on a range of mobile, tablet and desktop devices.
 ### Accessibility
 ### Validator Testing
 ### Lighthouse Testing
