@@ -24,7 +24,7 @@ const timerElement = document.getElementById("timer");
 const saveScoresBtn = document.getElementById("save-score-btn");
 const highScoresPage = document.getElementById("high-scores-page");
 const username = document.getElementById("username");
-const clearScoresBtn = document.getElementById("clear-high-scores")
+const clearScoresBtn = document.getElementById("clear-high-scores");
 
 let currentQuestion = {};
 let score = 0;

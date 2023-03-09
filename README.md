@@ -221,6 +221,17 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 
 ### Validator Testing
 ### Lighthouse Testing
+Lighthouse testing was carried out to test the performance, accessibility, best practices and SEO of the quiz on both a desktop and mobile device.
+  <details><summary>Desktop lighthouse scores</summary>
+
+![Wave results](docs/testing/lighthouse-desktop.png)
+</details>
+
+<details><summary>Mobile lighthouse scores</summary>
+
+![Wave results](docs/testing/lighthouse-mobile.png)
+</details>
+
 ### Manual Testing
  Thorough testing of this quiz has been undertaken to ensure that all of the buttons and functionality of the quiz work exactly as they have been intended to.
  - Home page
@@ -283,6 +294,18 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 - Expectation: To see how long I have left to answer the question
     - Result: The timer on the info bar of the quiz shows how many seconds the user has left and once the timer reaches 0, the Next button will be highlighted signalling that the user has to move on.
 ### Solved Bugs
+- Initially when clicking the Restart button this just changed the question but the answer buttons had not been reset (meaning that the user could not click any of the answer buttons and the colour from the previous question was still present).
+    - This was resolved creating a restartQuiz function and targeting this function in the restartButton event listenter, instead of the previous runQuiz function where it was targeted to before.
+    - A separate resetAnswerButtons function was also created and added to the restartQuiz function.
+- The question counter was not resetting when the quiz was played again, meaning that the correct questions kept increasing instead of being reset to 0, as shown in the image below: 
+![Question counter bug](docs/testing/question-counter-bug.png)
+    - This was resolved by setting correctQuestions = 0 in the runQuiz function so it will always reset at the start of each game.
+- The timer was not resetting to 0 when restarting the quiz.
+    - This was resolved by adding the stopTimer function to both the homeIcon event listener and adding the stopTimer function to the restartQuiz function and setting the timer's inner text to 20.
+- The disabled answer buttons were present when the user clicked an answer,  then clicked the Home button and then clicked play again.
+    - This was resolved by adding the resetAnswerButtons function to the runQuiz function so that the answer buttons return to their default state when a user exits the quiz to the Home page and then plays again.
+- The high scores were not saving in the High Scores page when the page was refreshed.
+    - This was due to a typo in the getItem and setItem methods as these previously read: getItem("highscores") and setItem("highScores") - with a capital S in the setItem method but not with getItem. Therefore, this was changed to "highScores" for both to solve this bug.
 ## Deployment
 - The website was deployed to Github pages. The steps to deploy are as follows:
     - Login to Github and find the Github repository 'Friends Quiz'
