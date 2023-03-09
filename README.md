@@ -222,6 +222,17 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 ### Validator Testing
 ### Lighthouse Testing
 ### Manual Testing
+ Thorough testing of this quiz has been undertaken to ensure that all of the buttons and functionality of the quiz work exactly as they have been intended to.
+ - Home page
+
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+| Play button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the start of the quiz. The question counter is on 1, the timer is on 20, the score is on 0.| Clicked the Play button.| The button has a hover effect when the mouse is over it. Taken to the start of the quiz.The question counter is on 1, the timer is on 20, the score is on 0.|
+| How to play button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the How to play page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the How to play section.|
+| How to play section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken back to the Home page.| Clicked the Home button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
+| High Scores button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the High Scores section.| Clicked the High Scores button.| The button has a hover effect when the mouse is over it. Taken to the High Scores section.|
+| High Scores section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the How to play page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the How ot play section.|
+
 ### Testing User Stories
 - Expectation: To play a fun and interactive online quiz to my my 'Friends' knowledge
     - Result: The site is an engaging way to test the user's 'Friends' knowledge thanks to the range of questions presented in the quiz that are all varying levels of difficulty.
@@ -261,4 +272,5 @@ The live link can be found here:
 - [Free Code Camp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/) was used to help show me how to make a modal.
 - [Free Code Camp](https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/) was also used to show me how to reload the window.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity) was used to show me how to set a custom validity for the username.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) was also used to explain the setTimeout method.
 - [Stack Overflow](https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript) was used to show me how to clear the local storage.

@@ -118,7 +118,7 @@ hr {
     font-size: 25px;
 }
 
-.home-icon:hover {
+#home-icon:hover {
     box-shadow: none;
 }
 
