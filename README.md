@@ -194,7 +194,7 @@ This quiz has been designed to be both entertaining and easy to use, and as such
     - Used to develop and edit the code
 - Git
     - Used to add, commit and push the code
-- Github
+- GitHub
     - Used to store and deploy the code
 - [Balsamiq](https://balsamiq.com/)
     - Used to create wireframes
@@ -231,7 +231,27 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 | How to play button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the How to play page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the How to play section.|
 | How to play section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken back to the Home page.| Clicked the Home button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
 | High Scores button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the High Scores section.| Clicked the High Scores button.| The button has a hover effect when the mouse is over it. Taken to the High Scores section.|
-| High Scores section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the How to play page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the How ot play section.|
+| High Scores section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the Home page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
+| High Scores section Clear high scores button| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.|
+
+- Quiz section
+
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+| Home icon| The button has a hover effect, but no shadow, when the mouse is over it. When clicked, the user is taken to the Home page.| Clicked the home icon.| The button has a hover effect, but no shadow, when the mouse is over it. Taken to the Home page when clicked.|
+| Answer buttons| All answer buttons have a hover effect during the 20s of the timer. When the timer reaches 0, the hover effect and ability to click the buttons is disabled.| Hovered the mouse over the answer buttons.| All answer buttons have a hover effect during the 20s of the timer. When the timer reaches 0, the hover effect and ability to click the buttons is disabled, preventing the user from clicking them.|
+| Answer buttons - correct answer| The answer button has a hover effect. When clicked, the answer button turns green and all of the answer buttons are disabled and lose their hover effect.| Clicked the correct answer button.| The answer button has a hover effect. When clicked, the answer button turns green and all of the answer buttons are disabled and lose their hover effect.|
+| Answer buttons - incorrect answer| The answer button has a hover effect. When clicked, the answer button turns red and all of the answer buttons are disabled and lose their hover effect.| Clicked the incorrect answer button.| The answer button has a hover effect. When clicked, the answer button turns red and all of the answer buttons are disabled and lose their hover effect.|
+| Next button| The button is disabled until a user clicks on one of the answer buttons. Once the user clicks an answer, the button is enabled and has a hover effect when the mouse is over it. When clicked, the user is taken to the next question.| Clicked the Next button.| The button is disabled until a user clicks on one of the answer buttons. Once the user clicks an answer, the button is enabled and has a hover effect when the mouse is over it. When clicked, the user is taken to the next question.|
+| Restart button| The Restart button has a hover effect. When clicked, the quiz starts again, resetting the question counter, timer and score to their original state.| Clicked the Restart button| The Restart button has a hover effect. When clicked, the quiz starts again, resetting the question counter, timer and score to their original state.|
+| Question counter| When the quiz is first run, this will show 1/maximum number of questions - in this case it will show 1/10. This increments each time the next button is clicked. After the question counter reaches 10/10, the quiz ends.| Played through the quiz until the end.| At the start of the quiz this shows 1/10. Clicking an answer button and then the Next button increments the question counter by 1 each time. After the counter reaches 10/10, the user is taken to the end page after selecting their answer.|
+| Timer - countdown to 0|When the quiz is first run, the timer is set to 20s and begins counting down immediately. When it reaches 0, the answer buttons are disabled and the Next button is highlighted by the text turning red and becoming bold. Clicking the Next button resets the timer to countdown from 20s again. | Started the quiz and let the timer run to 0| Starting the quiz sets the timer to 20s and it begins counting down immediately. When it reaches 0, the answer buttons are disabled and the Next button is highlighted by the text turning red and becoming bold. Clicking the Next button resets the timer to countdown from 20s again.|
+| Timer - answer button clicked|When the user clicks an answer button, the timer stops. It resets when the user clicks the Next button. | Clicked an answer button| Clicking an answer button stops the timer. It resets back to 20s when the user clicks the Next button. |
+|Score counter - correct answer |When the quiz is first run, the score counter is on 0. If the user gets the question correct, the score increases by 10 + the time left on the timer. | Clicked a correct answer button| Score counter is on 0 at the start of the quiz. Clicking a correct answer button increased the score by 10 + the time left on the counter (in this case there were 19s left on the timer so the score increased to 29). |
+|Score counter - incorrect answer | If the user gets the question incorrect, the score stays the same. | Clicked an incorrect answer button| The score did not increase from the previous score of 29 so the score counter remained on this number. |
+
+- End page
+
 
 ### Testing User Stories
 - Expectation: To play a fun and interactive online quiz to my my 'Friends' knowledge
@@ -274,3 +294,4 @@ The live link can be found here:
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity) was used to show me how to set a custom validity for the username.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) was also used to explain the setTimeout method.
 - [Stack Overflow](https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript) was used to show me how to clear the local storage.
+- [GitHub Gist](https://gist.github.com/citrusui/07978f14b11adada364ff901e27c7f61) was used to show me how to create dropdown lists is markdown.
