@@ -143,7 +143,8 @@ function getNewQuestion() {
     answerButton4.innerText = currentQuestion.d;
 
     // Removes question that has just been used from availableQuestions array
-    availableQuestions.splice(questionIndex, 1); // Code from https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
+    // Code from https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=4
+    availableQuestions.splice(questionIndex, 1); 
 
     // Ensures that users have to select an answer before continuing
     nextButton.setAttribute("disabled", "disabled");

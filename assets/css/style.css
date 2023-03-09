@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Gloria+Hallelujah&family=Montserrat&display=swap');
 
 /* Global styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +31,7 @@ h2 {
     font-size: 24px;
 }
 
-/* Same styles for home page, rules, quiz area */
+/* Same styles for home page, rules, quiz area, end page, high scores page and error page */
 .quiz-container, .rules-area, .quiz-area, .quiz-end-page, .high-scores-page, .error-page {
     background-color: #a0a9d9;
     border-radius: 10px;
@@ -68,8 +67,7 @@ h2 {
     padding: 5px;
 }
 
-/* Hide rules area */
-
+/* Hide parts of the quiz */
 .hidden {
     display: none;
 }
@@ -98,7 +96,6 @@ h2 {
 /* Quiz area */
 
 /* Info bar */
-
 .info-bar {
     width: 80vw;
     display: flex;
@@ -123,7 +120,6 @@ hr {
 }
 
 /* Question area */
-
 .question-area {
     width: 100%;
     padding-top: 10px;
