@@ -35,11 +35,11 @@ const quizQuestions = [
     },
     {
         question: "What animal does Rachel run into when she attempts to jog like Phoebe?",
-        a: "fox",
-        b: "dog",
-        c: "cow",
-        d: "horse",
-        answer: "horse",
+        a: "Fox",
+        b: "Dog",
+        c: "Cow",
+        d: "Horse",
+        answer: "Horse",
     },
     {
         question: "Which actor stars opposite Joey in a WW1 movie?",
@@ -59,11 +59,11 @@ const quizQuestions = [
     },
     {
         question: "What colour is the main sofa in Central Perk?",
-        a: "yellow",
-        b: "purple",
-        c: "red",
-        d: "orange",
-        answer: "orange",
+        a: "Yellow",
+        b: "Purple",
+        c: "Red",
+        d: "Orange",
+        answer: "Orange",
     },
     {
         question: "Which actress plays Phoebe?",
