@@ -202,7 +202,7 @@ function resetAnswerButtons() {
 }
 
 // Increments user score by 10 points for each correct question
-// Code from https://www.youtube.com/watch?v=BOQLbu_Crc0&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=6
+// Code adapted from https://www.youtube.com/watch?v=BOQLbu_Crc0&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=6
 function incrementScore(num) {
     score += num;
     scoreText.innerText = score += timeLeft;
@@ -222,6 +222,7 @@ function restartQuiz() {
 }
 
 // Timer
+// Code adapted from https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
 // Sets timer to 20 seconds and decreases it every second
 function startTimer() {
     timeLeft = 20;
@@ -264,7 +265,7 @@ function goToEndPage() {
 }
 
 // High scores page
-// Code from https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10
+// Code adapted from https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10
 
 // JSON.parse to covert string into an array
 // Gets high scores from local storage or returns an empty array if there is nothing there

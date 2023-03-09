@@ -231,8 +231,15 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 | How to play button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the How to play page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the How to play section.|
 | How to play section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken back to the Home page.| Clicked the Home button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
 | High Scores button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the High Scores section.| Clicked the High Scores button.| The button has a hover effect when the mouse is over it. Taken to the High Scores section.|
+
+- High scores section
+
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
 | High Scores section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the Home page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
 | High Scores section Clear high scores button| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.|
+| Order of the high scores| The high scores are ordered with the highest score at the top down to the 5th highest score at the bottom| Played the quiz 5 times, saving all of the high scores.| The highest score is at the top of the list, and the list continues down in descending order down to the 5th highest score. [Top 5 high scores](docs/testing/top-5-highscores.png)|
+| Maximum of 5 high scores| There will only be the top 5 highest scores present on the High Scores page| Played the quiz a sixth time, saving the high scores.| Only the top 5 highest scores are shown on the High Scores page and the lowest score out of the 6 high scores is removed from the list. [New top 5 high scores](docs/testing/new-top-5-highscores.png)|
 
 - Quiz section
 
@@ -252,6 +259,13 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 
 - End page
 
+| Feature | Expectation | Action | Result |
+| ---| ---| ---| ---|
+| Score| The number of correct questions and the score show on the end page when the quiz ends.| Ran the quiz to the end| Taken to the end page upon finishing the last question of the quiz and shown how many questions out of 10 were answered correctly and the final score.|
+| Save high score button - with no username input| The Save high score button has a hover effect. When the Save high score button is clicked, score is not saved and user is not taken to High Scores page as they have not inputted a username. Instead a validation message appears in the username box telling the user to input a username to save their high score.| Clicked the Save high score button| The Save high score button has a hover effect. High score not saved and the user is presented with a validation message in the username box telling them to input a username to save their high score.|
+| Save high score button - with a username input| The Save high score button has a hover effect. When the Save high score button is clicked, score is saved and user is taken to High Scores page as they have not inputted a username.| Clicked the Save high score button| The Save high score button has a hover effect. High score is saved and the user is taken to the High Scores page.|
+| Play again button| The Play again button has a hover effect. Restarts the quiz from the start with the question counter, timer and score reset to their original states.| Clicked the Play again button| The Play again button has a hover effect. Quiz restarts with the question counter, timer and score reset to their original states.|
+| Home button| The Home button has a hover effect. Takes the user back to the Home page| Clicked the Home button| The Home button has a hover effect. Takes the user back to the Home page.|
 
 ### Testing User Stories
 - Expectation: To play a fun and interactive online quiz to my my 'Friends' knowledge
@@ -294,4 +308,5 @@ The live link can be found here:
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity) was used to show me how to set a custom validity for the username.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) was also used to explain the setTimeout method.
 - [Stack Overflow](https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript) was used to show me how to clear the local storage.
+- [Stack Overflow](https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz) was also used to show how to implement a timer.
 - [GitHub Gist](https://gist.github.com/citrusui/07978f14b11adada364ff901e27c7f61) was used to show me how to create dropdown lists is markdown.
