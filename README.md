@@ -20,16 +20,28 @@
 ## Design
 ### Wireframes
 Balsamiq wireframes were created for mobile, tablet and desktop devices to show the structure and overall design of each page of the quiz.
+<details><summary>Home page wireframe</summary>
 
-[Home page wireframe](docs/wireframes/homepage.png)
+![Home page wireframe](docs/wireframes/homepage.png)
+</details>
+<details><summary>Rules page wireframe</summary>
 
-[Rules page wireframe](docs/wireframes/rules-page.png)
+![Rules page wireframe](docs/wireframes/rules-page.png)
+</details>
+<details><summary>Quiz page wireframe</summary>
 
-[Questions page wireframe](docs/wireframes/questions-page.png)
+![Quiz page wireframe](docs/wireframes/questions-page.png)
+</details>
+<details><summary>End page wireframe</summary>
 
-[End page wireframe](docs/wireframes/end-page.png)
+![End page wireframe](docs/wireframes/end-page.png)
+</details>
 
-[High scores page wireframe](docs/wireframes/high-scores-page.png)
+<details><summary>High scores page wireframe</summary>
+
+![High scores page wireframe](docs/wireframes/high-scores-page.png)
+</details>
+
 
 ### Colour Scheme
 The purple and yellow colours have been used because of their connotations with the TV show 'Friends' and so have been chosen to tie into the theme of the quiz and also because they would be instantly recognisable colours to a fan of the programme.
@@ -221,7 +233,13 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 
 ### Validator Testing
 - HTML
+    - No errors were found when the index.html page was passed through the [W3C HTML validator](https://validator.w3.org/).
+    - ![index.html validator](docs/testing/html-validator.png)
+    - No errors were found when the 404.html page was passed through the [W3C validator](https://validator.w3.org/).
+    - ![404.html validator](docs/testing/html-validator-404-page.png)
 - CSS
+    - No errors were found when the index.html page was passed through the [W3C CSS validator](https://jigsaw.w3.org/css-validator/).
+    - ![css validator](docs/testing/css-validator.png)
 - JavaScript
     
     - No errors were found when either of the JavaScript pages were passed through the [JSHint validator](https://jshint.com/).
