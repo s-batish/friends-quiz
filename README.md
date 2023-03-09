@@ -220,6 +220,24 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 </details>
 
 ### Validator Testing
+- HTML
+- CSS
+- JavaScript
+    
+    - No errors were found when either of the JavaScript pages were passed through the [JSHint validator](https://jshint.com/).
+
+    - script.js validator:
+        
+        ![script.js validator](docs/testing/jshint-scripts.js.png)
+
+        - The warning mentioned here is because I added an event listener that loops through all of the home button icons throughout the quiz, which is why I have added the stopTimer function, so that the timer will stop when the user returns Home, the score variable is reset to 0, and the timeLeft variable is reset to 20. This ensures that the quiz will be reset to its default state when the user clicks a home icon to return to the Home page, and I thought that creating a loop in this way was the most efficient way to do this.
+        - The undefined variable mentioned here is because the quizQuestions variable has been defined in the questions.js, but I had not exported and imported it to the script.js. I chose to have the quiz questions written in a separate JavaScript file as I thought it improved the structure and readability of the main JavaScript file to have the questions elsewhere.
+
+    - questions.js validator:
+        
+        ![script.js validator](docs/testing/jshint-questions.js.png)
+        - The quizQuestions variable has been noted as unused here because, as I mentioned before, the quiz questions were written in a separate file to be used and called upon in the script.js file.
+
 ### Lighthouse Testing
 Lighthouse testing was carried out to test the performance, accessibility, best practices and SEO of the quiz on both a desktop and mobile device.
   <details><summary>Desktop lighthouse scores</summary>

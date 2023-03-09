@@ -231,11 +231,6 @@ hr {
         padding: 5px;
     }
 
-    .next-restart-btns {
-        display: flex;
-        flex-direction: column;
-    }
-
     .score-text {
         font-size: 20px;
     }
