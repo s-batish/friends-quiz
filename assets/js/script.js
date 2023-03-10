@@ -251,7 +251,7 @@ function stopTimer() {
 }
 
 // End page timeout
-// Automatically goes to end page after 0.5s
+// Automatically goes to end page after 0.25s
 // setTimeout method from https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
 function goToEndPage() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
