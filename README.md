@@ -44,7 +44,7 @@ Balsamiq wireframes were created for mobile, tablet and desktop devices to show 
 
 
 ### Colour Scheme
-The purple and yellow colours have been used because of their connotations with the TV show 'Friends' and so have been chosen to tie into the theme of the quiz and also because they would be instantly recognisable colours to a fan of the programme.
+The purple and yellow colours have been used because of their connotations with the TV show 'Friends' and so have been chosen to tie into the theme of the quiz, and also because they would be instantly recognisable colours to a fan of the programme.
 ### Typography
 - The font 'Gloria Hallelujah' has been used for the title of the quiz because of its similarity to the 'Friends' logo.
 - 'Cherry Swash' has been used for the headings, buttons and questions, and 'Montserrat' has been used for the answers and paragraph elements because they complement each other quite well and create an easy to read, but visually appealing quiz.
@@ -131,6 +131,16 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 ![Mobile incorrect answer](docs/features/incorrect-answer-mobile.png)
 </details>
 
+- If the user does not answer the question in time and the timer reaches 0, the Next button will be highlighted by becoming bold and red to signal to the user to go to the next question.
+<details><summary>Desktop timer at 0</summary>
+
+![Desktop timer at 0](docs/features/timer-0-desktop.png)
+</details>
+<details><summary>Mobile timer at 0</summary>
+
+![Mobile timer at 0](docs/features/timer-0-mobile.png)
+</details>
+
 #### Info bar
 - The info bar on the quiz section has 4 font awesome icons to represent different functions on the quiz:
 
@@ -190,7 +200,7 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 </details>
 
 ### Future Features
-- While I was making the high scores page on this quiz, I did look into saving the high scores to a Firebase database, as suggested by my mentor, as this would prevent the high scores from disappearing on different devices, as is the case with saving scores to local storage, and would mean that users would have greater competition by comparing their scores against anyone playing the quiz. However, given that I had never used this system before and that I had already implemented a local storage high scores page, I decided not to implement this feature in this project. However, with more time and knowledge of Firebase this is definitely something that I would want to add to this quiz.
+- While I was making the high scores page on this quiz, I did look into saving the high scores to a Firebase database, as suggested by my mentor, as this would prevent the high scores from only being visible on the device the quiz is being played on, as is the case with saving scores to local storage, and would mean that users would have greater competition by comparing their scores against anyone playing the quiz. However, given that I had never used this system before and that I had already implemented a local storage high scores page, I decided not to implement this feature in this project at this time. However, with more time and knowledge of Firebase this is definitely something that I would want to add to this quiz.
 - I would also want to add different levels to the quiz to allow the user to choose between easy, medium and hard questions, as right now the questions are a mix of all three categories, so I think that having different levels would create a more engaging experience for the quiz's users.
 - Sound effects are another aspect that I think would make the quiz more engaging for users, for instance different sound effects when the user got a question correct or incorrect.
 - Creating a function to shuffle the answer buttons would also be a good future feature to implement as this would ensure that the answer buttons do not appear in the same spaces everytime the same question is shown.
@@ -234,12 +244,12 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 ### Validator Testing
 - HTML
     - No errors were found when the index.html page was passed through the [W3C HTML validator](https://validator.w3.org/).
-    - ![index.html validator](docs/testing/html-validator.png)
+    ![index.html validator](docs/testing/html-validator.png)
     - No errors were found when the 404.html page was passed through the [W3C validator](https://validator.w3.org/).
-    - ![404.html validator](docs/testing/html-validator-404-page.png)
+    ![404.html validator](docs/testing/html-validator-404-page.png)
 - CSS
     - No errors were found when the index.html page was passed through the [W3C CSS validator](https://jigsaw.w3.org/css-validator/).
-    - ![css validator](docs/testing/css-validator.png)
+    ![css validator](docs/testing/css-validator.png)
 - JavaScript
     
     - No errors were found when either of the JavaScript pages were passed through the [JSHint validator](https://jshint.com/).
@@ -274,7 +284,7 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
 
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
-| Play button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the start of the quiz. The question counter is on 1, the timer is on 20, the score is on 0.| Clicked the Play button.| The button has a hover effect when the mouse is over it. Taken to the start of the quiz.The question counter is on 1, the timer is on 20, the score is on 0.|
+| Play button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the start of the quiz. The question counter is on 1, the timer is on 20, the score is on 0.| Clicked the Play button.| The button has a hover effect when the mouse is over it. Taken to the start of the quiz. The question counter is on 1, the timer is on 20, the score is on 0.|
 | How to play button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the How to play page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the How to play section.|
 | How to play section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken back to the Home page.| Clicked the Home button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
 | High Scores button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the High Scores section.| Clicked the High Scores button.| The button has a hover effect when the mouse is over it. Taken to the High Scores section.|
@@ -284,7 +294,7 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
 | High Scores section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the Home page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
-| High Scores section Clear high scores button| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.|
+| High Scores section Clear high scores button| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.| Clicked the Clear high scores button.| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.|
 | Order of the high scores| The high scores are ordered with the highest score at the top down to the 5th highest score at the bottom| Played the quiz 5 times, saving all of the high scores.| The highest score is at the top of the list, and the list continues down in descending order down to the 5th highest score. [Top 5 high scores](docs/testing/top-5-highscores.png)|
 | Maximum of 5 high scores| There will only be the top 5 highest scores present on the High Scores page| Played the quiz a sixth time, saving the high scores.| Only the top 5 highest scores are shown on the High Scores page and the lowest score out of the 6 high scores is removed from the list. [New top 5 high scores](docs/testing/new-top-5-highscores.png)|
 
@@ -309,8 +319,8 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
 | Score| The number of correct questions and the score show on the end page when the quiz ends.| Ran the quiz to the end| Taken to the end page upon finishing the last question of the quiz and shown how many questions out of 10 were answered correctly and the final score.|
-| Save high score button - with no username input| The Save high score button has a hover effect. When the Save high score button is clicked, score is not saved and user is not taken to High Scores page as they have not inputted a username. Instead a validation message appears in the username box telling the user to input a username to save their high score.| Clicked the Save high score button| The Save high score button has a hover effect. High score not saved and the user is presented with a validation message in the username box telling them to input a username to save their high score.|
-| Save high score button - with a username input| The Save high score button has a hover effect. When the Save high score button is clicked, score is saved and user is taken to High Scores page as they have not inputted a username.| Clicked the Save high score button| The Save high score button has a hover effect. High score is saved and the user is taken to the High Scores page.|
+| Save high score button - with no username input| The Save high score button has a hover effect. When the Save high score button is clicked, score is not saved and user is not taken to High Scores page as they have not input a username. Instead a validation message appears in the username box telling the user to input a username to save their high score.| Clicked the Save high score button| The Save high score button has a hover effect but the user is not taken to the High scores page when the button is clicked. High score not saved and the user is presented with a validation message in the username box telling them to input a username to save their high score.|
+| Save high score button - with a username input| The Save high score button has a hover effect. When the Save high score button is clicked, score is saved and user is taken to High Scores page as they have input a username.| Clicked the Save high score button| The Save high score button has a hover effect. High score is saved and the user is taken to the High Scores page.|
 | Play again button| The Play again button has a hover effect. Restarts the quiz from the start with the question counter, timer and score reset to their original states.| Clicked the Play again button| The Play again button has a hover effect. Quiz restarts with the question counter, timer and score reset to their original states.|
 | Home button| The Home button has a hover effect. Takes the user back to the Home page| Clicked the Home button| The Home button has a hover effect. Takes the user back to the Home page.|
 
@@ -324,7 +334,7 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
 - Expectation: To easily navigate the site and to have a way to return to the Home page at any point of the quiz
     - Result: The buttons on the quiz clearly explain what they do and there are Home buttons found on all of the sections of the quiz to allow the user to return to the Home page whenever they want.
 - Expectation: To be able to restart the quiz at any point while I am playing the game
-    - The Restart button on the quiz section allows the user to easily restart the quiz without having to return to the Home page and then starting the quiz again.
+    - The Restart button on the quiz section allows the user to easily restart the quiz without having to return to the Home page and then start the quiz again.
 - Expectation: To see what question number I am on and how many questions I have left
     - The question counter on the info bar of the quiz clearly shows what question out of the maximum number of questions the user is on.
 - Expectation: To see how long I have left to answer the question
@@ -333,7 +343,7 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
 - Initially when clicking the Restart button this just changed the question but the answer buttons had not been reset (meaning that the user could not click any of the answer buttons and the colour from the previous question was still present).
     - This was resolved creating a restartQuiz function and targeting this function in the restartButton event listenter, instead of the previous runQuiz function where it was targeted to before.
     - A separate resetAnswerButtons function was also created and added to the restartQuiz function.
-- The question counter was not resetting when the quiz was played again, meaning that the correct questions kept increasing instead of being reset to 0, as shown in the image below: 
+- The question counter was not resetting when the quiz was played again, meaning that the correct questions kept increasing instead of being reset to 0, as shown in here: 
 ![Question counter bug](docs/testing/question-counter-bug.png)
     - This was resolved by setting correctQuestions = 0 in the runQuiz function so it will always reset at the start of each game.
 - The timer was not resetting to 0 when restarting the quiz.
@@ -351,7 +361,8 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
     - Under the 'Branch' drop down menus, select 'main' and 'root'
     - Click 'Save'
     - Once the page refreshes, the live link should appear underneath the 'Github Pages' title
-The live link can be found here: 
+
+The live link can be found here: https://s-batish.github.io/friends-quiz/
 ## Credits
 ### Content
 - The quiz questions and answers were written by myself, with inspiration from the book 'Mental Perk A Friends Quiz Book'.
@@ -368,4 +379,4 @@ The live link can be found here:
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) was also used to explain the setTimeout method.
 - [Stack Overflow](https://stackoverflow.com/questions/7667958/clearing-localstorage-in-javascript) was used to show me how to clear the local storage.
 - [Stack Overflow](https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz) was also used to show how to implement a timer.
-- [GitHub Gist](https://gist.github.com/citrusui/07978f14b11adada364ff901e27c7f61) was used to show me how to create dropdown lists is markdown.
+- [GitHub Gist](https://gist.github.com/citrusui/07978f14b11adada364ff901e27c7f61) was used to show me how to create dropdown lists in markdown.
