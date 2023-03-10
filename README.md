@@ -371,7 +371,7 @@ The live link can be found here: https://s-batish.github.io/friends-quiz/
 - The favicon is from [Favicon](https://favicon.io/).
 ### Media
 - The background image is from [Unsplash](https://unsplash.com/photos/QZ7dTMf_cqQ).
-- The favicon image is from [Pixabay](https://pixabay.com/vectors/icon-shannon-television-tube-tv-1293234/)
+- The favicon image is from [Pixabay](https://pixabay.com/vectors/icon-shannon-television-tube-tv-1293234/).
 ### Code
 - James Q Quick's [youtube tutorials](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) were used to help implement various elements of this quiz, such as adding the button hover shadow, creating the high scores function and how to randomly generate the questions, which have been noted in the script.js code.
 - [Free Code Camp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/) was used to help show me how to make a modal.
