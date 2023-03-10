@@ -10,7 +10,7 @@
 - To enable users to compete against their friends and family through the High Scores section, which makes it easy for users to see their previous scores and improve
 - To provide a fully responsive quiz that can be played on a range of devices
 ### External User's Goals
-- To play a fun and interactive online quiz to my my 'Friends' knowledge
+- To play a fun and interactive online quiz to test my 'Friends' knowledge
 - To save my high scores and view them in a leaderboard
 - To have clear instructions about the rules of the game and how the scoring works
 - To easily navigate the site and to have a way to return to the Home page at any point of the quiz
@@ -55,7 +55,7 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 - It is an easy to navigate Home page, with the title of the quiz at the top, and 3 buttons below:
     
     - A Play button to start the quiz
-    - A how to play button to take the user to the rules of the game
+    - A How to play button to take the user to the rules of the game
     - A High Scores button to take the user to the high scores page
 
 <details><summary>Desktop home page</summary>
@@ -245,10 +245,10 @@ This quiz has been designed to be both entertaining and easy to use, and as such
 - HTML
     - No errors were found when the index.html page was passed through the [W3C HTML validator](https://validator.w3.org/).
     ![index.html validator](docs/testing/html-validator.png)
-    - No errors were found when the 404.html page was passed through the [W3C validator](https://validator.w3.org/).
+    - No errors were found when the 404.html page was passed through the [W3C HTML validator](https://validator.w3.org/).
     ![404.html validator](docs/testing/html-validator-404-page.png)
 - CSS
-    - No errors were found when the index.html page was passed through the [W3C CSS validator](https://jigsaw.w3.org/css-validator/).
+    - No errors were found when the quiz was passed through the [W3C CSS validator](https://jigsaw.w3.org/css-validator/).
     ![css validator](docs/testing/css-validator.png)
 - JavaScript
     
@@ -293,7 +293,7 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
 
 | Feature | Expectation | Action | Result |
 | ---| ---| ---| ---|
-| High Scores section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the Home page.| Clicked the How to play button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
+| High Scores section Home button| The button has a hover effect when the mouse is over it. When clicked, the user is taken to the Home page.| Clicked the Home button.| The button has a hover effect when the mouse is over it. Taken to the Home page.|
 | High Scores section Clear high scores button| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.| Clicked the Clear high scores button.| The button has a hover effect when the mouse is over it. When clicked, the window reloads and takes the user back to the Home page. When the High Scores button is clicked again the High scores page is cleared.|
 | Order of the high scores| The high scores are ordered with the highest score at the top down to the 5th highest score at the bottom| Played the quiz 5 times, saving all of the high scores.| The highest score is at the top of the list, and the list continues down in descending order down to the 5th highest score. [Top 5 high scores](docs/testing/top-5-highscores.png)|
 | Maximum of 5 high scores| There will only be the top 5 highest scores present on the High Scores page| Played the quiz a sixth time, saving the high scores.| Only the top 5 highest scores are shown on the High Scores page and the lowest score out of the 6 high scores is removed from the list. [New top 5 high scores](docs/testing/new-top-5-highscores.png)|
@@ -346,7 +346,7 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
 - The question counter was not resetting when the quiz was played again, meaning that the correct questions kept increasing instead of being reset to 0, as shown in here: 
 ![Question counter bug](docs/testing/question-counter-bug.png)
     - This was resolved by setting correctQuestions = 0 in the runQuiz function so it will always reset at the start of each game.
-- The timer was not resetting to 0 when restarting the quiz.
+- The timer was not resetting to 20 when restarting the quiz.
     - This was resolved by adding the stopTimer function to both the homeIcon event listener and adding the stopTimer function to the restartQuiz function and setting the timer's inner text to 20.
 - The disabled answer buttons were present when the user clicked an answer,  then clicked the Home button and then clicked play again.
     - This was resolved by adding the resetAnswerButtons function to the runQuiz function so that the answer buttons return to their default state when a user exits the quiz to the Home page and then plays again.
@@ -354,7 +354,7 @@ Lighthouse testing was carried out to test the performance, accessibility, best 
     - This was due to a typo in the getItem and setItem methods as these previously read: getItem("highscores") and setItem("highScores") - with a capital S in the setItem method but not with getItem. Therefore, this was changed to "highScores" for both to solve this bug.
 ## Deployment
 - The website was deployed to Github pages. The steps to deploy are as follows:
-    - Login to Github and find the Github repository 'Friends Quiz'
+    - Login to Github and find the Github repository 'friends-quiz'
     - Click on the 'Settings' button at the top of the repository
     - Click on 'Pages' on the left hand side navigation menu
     - Select 'Deploy from a branch' under 'Source' if this is not already selected
@@ -371,6 +371,7 @@ The live link can be found here: https://s-batish.github.io/friends-quiz/
 - The favicon is from [Favicon](https://favicon.io/).
 ### Media
 - The background image is from [Unsplash](https://unsplash.com/photos/QZ7dTMf_cqQ).
+- The favicon image is from [Pixabay](https://pixabay.com/vectors/icon-shannon-television-tube-tv-1293234/)
 ### Code
 - James Q Quick's [youtube tutorials](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) were used to help implement various elements of this quiz, such as adding the button hover shadow, creating the high scores function and how to randomly generate the questions, which have been noted in the script.js code.
 - [Free Code Camp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/) was used to help show me how to make a modal.
